@@ -1,0 +1,50 @@
+body {
+	background-image: url("images/resize-iphone.jpg");
+	background-color: #222222;
+	/* resize-iphone: */
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 322px 574px;
+}
+
+div.logo {
+	margin: 0 -34px;
+	text-align: center;
+}
+
+button#login {
+	/* Rectangle 2: */
+	background: #5E71F9;
+	border-radius: 8px;
+	/* Login: */
+	font-family: Roboto-Medium;
+	font-size: 20px;
+	color: #FFFFFF;
+}
+
+button#signup {
+	/* Rectangle 2: */
+	border: 2px solid #3AD83A;
+	border-radius: 8px;
+	/* Sign up: */
+	font-family: Roboto-Medium;
+	font-size: 20px;
+	color: #FFFFFF;
+	background-color: transparent;
+}
+
+button {
+	height:40px;
+	width:100px;
+}
+
+h1 {
+	/* Welcome to Darrel K.: */
+	font-family: Roboto-Bold;
+	font-size: 20px;
+	color: #FFFFFF;
+	padding-top: 184px;
+	padding-left: 55px;
+	text-align:center;
+}
+
