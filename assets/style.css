@@ -31,6 +31,8 @@ button#signup {
 	font-size: 20px;
 	color: #FFFFFF;
 	background-color: transparent;
+	position: relative;
+	left: 37px;
 }
 
 button {
@@ -48,3 +50,9 @@ h1 {
 	text-align:center;
 }
 
+.button-container {
+	position:absolute;
+	top:480px;
+	bottom:48px;
+	left:26px;
+}
