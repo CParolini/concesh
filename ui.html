@@ -7,6 +7,14 @@
 	<link rel=stylesheet href="assets/style.css">
 </head>
 <body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 logo">
@@ -48,7 +56,133 @@
 
 	</div>
 
+	<!-- =============NEW SECTION==================
+
+	================.REGISTER FORM.================ 
+
+	===============================================
+
+	-->	
+	<h1>Enter your information</h1>
+	<div class="row">
+		<div class="col-xs-8">
+			<div class="form-group">
+			    <label for="name">Name</label>
+			    <input type="name" class="form-control" id="name" aria-describedby="name" placeholder="Name">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-2">
+			<div class="dropdown">
+			  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			    U.S.
+			    <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+			    <li><a href="#">Action</a></li>
+			    <li><a href="#">Another action</a></li>
+			    <li><a href="#">Something else here</a></li>
+			    <li role="separator" class="divider"></li>
+			    <li><a href="#">Separated link</a></li>
+			  </ul>
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="form-group">
+			    <input type="name" class="form-control" id="name" aria-describedby="name" placeholder="Name">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-8">
+			<div class="form-group">
+			    <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="email">
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-8">
+			<button id="submit">Submit</button>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="g-signin2" data-onsuccess="onSignIn">
+			<iframe src="https://developers.google.com/identity/sign-in/web/demos/signin_contextual_simple.jshtml?hl=en" style="width: 200px;
+			height: 60px;"></iframe>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false">Log in with Facebook</div>
+	</div>
+
+	<!-- =============NEW SECTION==================
+
+	================Seat Info Modal================ 
+
+	===============================================
+
+	-->
+	<h1>Welcome to Darrel K. Royal Memorial Stadium!</h1>
+	<div class="tix-info-container">
+		<div class="row slots-box">
+			<div class="row tix-icons">
+				<div class="col-xs-3 icon">
+					<p>Section</p>
+				</div>
+			
+				<div class="col-xs-3 icon">
+					<p>Row</p>
+				</div>
+			
+				<div class="col-xs-3 icon">
+					<p>Seat</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-8">
+			<button id="submit">Submit</button>
+		</div>
+	</div>
+
+	<!-- =============.NEW SECTION.===============
+
+	==================.   Menu    .===============
+
+	==============================================
+	-->
+	<div class="container">
+	
+		<h1>Swipe for vendors near you</h1>
+		<div class="col-xs-10 menu-container">
+			<h1 class="vendor-name">China Express</h1>
+			<img src="http://placehold.it/240x160">
+		</div>	
+		<div class="row">
+			<div class="menu-item">
+				<div class="col-xs-5">
+					<h1 class="menu-item-name">Egg Roll</h1>
+				</div>
+				<div class="col-xs-2">
+					<h1 class="menu-item-qty">2</h1>
+				</div>
+				<div class="col-xs-3">
+					<h1 class="menu-item-price">$12.99</h1>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+
 	<script src="assets/logic.js"></script>
 </body>
 </html>

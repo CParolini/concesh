@@ -56,3 +56,79 @@ h1 {
 	bottom:48px;
 	left:26px;
 }
+
+#submit {
+	/* Rectangle 4: */
+	background: #3AD83A;
+	border-radius: 8px;
+	/* Submit: */
+	font-family: Roboto-Medium;
+	font-size: 19px;
+	color: #FFFFFF;
+	width:100%;
+}
+
+.dropdown {
+	width:100%;
+}
+
+.tix-info-container {
+	/* Rectangle: */
+	background: #000000;
+	border: 0 solid #FFFFFF;
+	box-shadow: 3px 3px 1px 0 rgba(0,0,0,0.50);
+	border-radius: 8px;
+	border-color:white;
+	width:240px;
+	height:480px;
+	padding:40px 40px 48px 40px;
+}
+
+.slots-box {
+	/* Rectangle 3: */
+	background: #F1F1F1;
+	border: 1px solid #979797;
+	border-radius: 8px;
+	width:240px;
+	height:269px;
+	position:relative;
+}
+
+.tix-icons {
+	/* Rectangle 2: */
+	background: #4A4A4A;
+	border: 1px solid #979797;
+	position:relative;
+	width:240px;
+}
+
+.icon {
+	background:#4A4A4A;
+	border: 1px solid #979797;
+	height:80px;
+	float:left;
+	width:33%;
+}
+
+.icon p {
+	color:#3AD83A;
+	text-align:center;
+	/* Section: */
+	font-family: Roboto-Bold;
+	font-size: 14px;
+}
+
+.menu-container {
+	/* Rectangle: */
+	background: #FFFFFF;
+	border: 1px solid #979797;
+	border-radius: 30px;
+	width:100%;
+}
+
+h1.vendor-name {
+	/* China Express: */
+	font-family: Signika-Semibold;
+	font-size: 29px;
+	color: #000000;
+}
