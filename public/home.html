@@ -59,6 +59,7 @@
             country: 'long_name',
             postal_code: 'short_name'
         };
+        console.log(autocomplete);
 
         function initAutocomplete() {
             // Create the autocomplete object, restricting the search to geographical
@@ -77,7 +78,9 @@
         function fillInAddress() {
             // Get the place details from the autocomplete object.
             var place = autocomplete.getPlace();
-            console.log(place.geometry.location);
+
+            console.log((place.geometry.viewport.b.f + place.geometry.viewport.b.b)/2);
+            console.log((place.geometry.viewport.b.f + place.geometry.viewport.b.b)/2);
         }
 
         // Bias the autocomplete object to the user's geographical location,
