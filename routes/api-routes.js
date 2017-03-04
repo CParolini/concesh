@@ -11,6 +11,17 @@ module.exports = function(app) {
         });
     });
 
+    // GET route to get info about selected venue
+    app.get("/api/getvenueinfo/:venueid", function(req, res) {
+        db.venue.findAll({
+            where: {
+                id: req.params.venueid
+            }
+        }).then(function(dbVenueInfo) {
+            res.json(dbVenueInfo);
+        });
+    });
+
     // GET route for getting all vendors at a venue
     app.get("/api/getvendors/:venueid", function(req, res) {
         db.vendor.findAll({

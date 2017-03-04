@@ -20,6 +20,18 @@ module.exports = function(sequelize, DataTypes) {
             validate: {
                 isDecimal: true
             }
+        },
+        sections: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        rows: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        seats: {
+            type: DataTypes.INTEGER,
+            allowNull: false
         }
     },
     {

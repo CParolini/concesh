@@ -1,5 +1,5 @@
 body {
-	background-image: url("../images/resize-iphone.jpg");
+	background-image: url("images/resize-iphone.jpg");
 	background-color: #222222;
 	/* resize-iphone: */
 	background-repeat: no-repeat;
@@ -44,6 +44,10 @@ button {
 
 .welcome {
 	padding-top: 40%;
+	text-align: center;
+	margin: auto;
+	/* float: none; */
+	max-width: 70%;
 }
 
 h1 {
@@ -55,10 +59,11 @@ h1 {
 }
 
 .button-container {
-	/*position:absolute;
-	top:480px;
-	bottom:48px;
-	left:26px;*/
+	bottom: 0;
+	margin: 0 auto;
+	width: 60%;
+	display: block;
+	padding-top: 30%;
 }
 
 .submit {
@@ -223,6 +228,13 @@ h1.price {
 	display:none;
 }
 
-.container {
+.welcome-container {
 	position:relative;
+	float:none;
+}
+
+.form-group {
+	width: 100%;
+	margin: auto;
+	padding: 2% 0 4%;
 }
