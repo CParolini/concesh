@@ -141,6 +141,10 @@ h1 {
 	display:none;
 }
 
+h1.menu-heading {
+	color: #000000;
+}
+
 h1.vendor-name {
 	/* China Express: */
 	font-family: Signika-Semibold;

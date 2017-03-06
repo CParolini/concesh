@@ -13,39 +13,60 @@ function getVenueInfo() {
         sections = data.sections;
         rows = data.sections;
         seats = data.seats;
+
+		/*
+		Use this area to write JQuery to fill in information for the dropdown menus for section/row/seat number
+		*/
     });
 }
 
-function getVendors() {
+function getMenus() {
     var query = "/api/getvendors/" + selectedVenue;
     $.get(query, function(data) {
         vendorInfo = data;
-    })
+		for(var i=0; i<vendorInfo.length; i++) {
+			/*
+			Use this area to write JQuery to fill in the carousel with each vendor and corresponding menu.
+			*/
+		}
+    });
 }
 
 $(document).ready(function(){
-	$("#login").click(function(){
+
+	// Initial login button click
+	$("#login").click(function() {
 		$(".welcome-container").hide();
 		$(".login-container").show();
 	});
 
-	$("#signup").click(function(){
+	// Initial signup button click
+	$("#signup").click(function() {
 		$(".welcome-container").hide();
 		$(".regform-container").show();
 	});
 
-	$(".submit").click(function(){
+	// Submits credentials after login or registration and sends user to seat selection
+	$(".submitCredentials").click(function() {
 		$(".regform-container").hide();
 		$(".login-container").hide();
 		$(".tix-info-container").show();
+
+		// Fill in dropdown menu for section/row/seat
+		getVenueInfo();
 	});
 
-	$("#tix-submit").click(function(){
+	// Submit seat info and shows menus
+	$("#tix-submit").click(function() {
 		$(".tix-info-container").hide();
 		$(".menu-container").show();
+
+		// Fill in vendor and menu item information
+		getMenus();
 	});
 
-	$("#checkout").click(function(){
+	// Checkout and send payment
+	$("#checkout").click(function() {
 		$(".tix-info-container").hide();
 		$(".menu-container").hide()
 		$("#checkout-modal").show();
