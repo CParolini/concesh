@@ -149,10 +149,27 @@
 		<div class="g-signin2" data-onsuccess="onSignIn">
 			<iframe class="g-signin2" src="https://developers.google.com/identity/sign-in/web/demos/signin_contextual_simple.jshtml?hl=en" style="width: 75%;
 			height: 60px;"></iframe>
-
 				<hr />
 		</div>
+	</div>
 
+	<!-- =============NEW SECTION==================
+
+	================Search Page================
+
+	===============================================
+
+	-->
+
+	<div class="search-container col-xs-9">
+		<div class="searchbar" id="autocomplete">
+			<div class="form-group row">
+				<input class="form-control" type="search" placeholder="Search" id="example-search-input">
+			</div>
+		</div>
+		<div class="col-xs-9">
+			<button class="search-submit">Submit</button>
+		</div>
 	</div>
 	<!-- =============NEW SECTION==================
 
@@ -163,11 +180,6 @@
 	-->
 	<div class="tix-info-container col-xs-9">
 		<h1>Welcome to Darrell K Royal-Texas Memorial Stadium!</h1>
-		<div class="searchbar" id="#autocomplete">
-			<div class="form-group row">
-				<input class="form-control" type="search" value="Search" id="example-search-input">
-			</div>
-		</div>
 		<div class="row slots-box">
 			<div class="tix-icons">
 				<div class="col-xs-3 icon flex-container">
@@ -325,6 +337,7 @@
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<script src="https://use.fontawesome.com/26e56c5853.js"></script>
 	<script src="js/ui.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfX53k8sSPq5gCp4E5qxumPQk3mlGk53w&libraries=places&callback=initAutocomplete" async defer></script>
 </body>
 
 </html>
