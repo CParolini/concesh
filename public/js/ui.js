@@ -57,6 +57,7 @@ $(document).ready(function(){
 	// Initial login button click
 	$("#login").click(function() {
 		$(".welcome-container").hide();
+		$(".buttons").hide();
 		$(".welcome").hide();
 		$(".search-container").hide();
 		$(".login-container").show();
@@ -65,6 +66,7 @@ $(document).ready(function(){
 	// Initial signup button click
 	$("#signup").click(function() {
 		$(".welcome-container").hide();
+		$(".buttons").hide();
 		$(".search-container").hide();
 		$(".regform-container").show();
 	});
