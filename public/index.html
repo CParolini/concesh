@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<title>Concesh</title>
@@ -8,24 +9,26 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700|Signika:600,700" rel="stylesheet">
 	<link rel=stylesheet href="css/style.css">
 </head>
+
 <body>
 	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
-	
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
 	<!-- FIRST SECTION -->
 	<!-- WELCOME PAGE -->
 
 	<div class="welcome-container">
 		<div class="logo">
-			<div class="col-xs-10 logo">
-
-				<svg width="259px" height="70px" viewBox="38 17 259 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<svg width="259px" height="70px" viewBox="38 17 259 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 					<!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
 					<desc>Created with Sketch.</desc>
 					<defs></defs>
@@ -65,21 +68,22 @@
 			    </g>
 			</svg>
 		</div>
-		<h1 class="welcome">Welcome to Darrell K Royal-Texas Memorial Stadium!</h1>
-		<div class="buttons">
-			<button id="login">Login</button>
-			<button id="signup">Sign up</button>
-		</div>
+	</div>
+	<h1 class="welcome">Welcome to Darrell K Royal-Texas Memorial Stadium!</h1>
+	<div class="buttons">
+		<button id="login">Login</button>
+		<button id="signup">Sign up</button>
+	</div>
 	</div>
 
 	<!-- =============NEW SECTION==================
 
-	================.REGISTER FORM.================ 
+	================.REGISTER FORM.================
 
 	===============================================
 
-	-->	
-	
+	-->
+
 	<div class="regform-container">
 		<h1>Enter your information</h1>
 		<div class="row">
@@ -93,17 +97,17 @@
 		<div class="row">
 			<div class="col-xs-2">
 				<div class="dropdown">
-				  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 					U.S.
 					<span class="caret"></span>
 				  </button>
-				  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-					<li><a href="#">Action</a></li>
-					<li><a href="#">Another action</a></li>
-					<li><a href="#">Something else here</a></li>
-					<li role="separator" class="divider"></li>
-					<li><a href="#">Separated link</a></li>
-				  </ul>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Separated link</a></li>
+					</ul>
 				</div>
 			</div>
 			<div class="col-xs-6">
@@ -125,7 +129,7 @@
 				<button class="submit submitCredentials">Submit</button>
 			</div>
 		</div>
-		
+
 		<hr />
 
 		<div class="row">
@@ -141,39 +145,39 @@
 	</div>
 
 	<!-- ============THIS IS THE LOGIN SECTION=============== -->
-	
+
 	<div class="login-container">
 		<h1>Sign in to your account</h1>
 		<div class="row">
 			<div class="form-group">
-			    <input type="name" class="form-control" id="name" aria-describedby="name" placeholder="Name">
+				<input type="name" class="form-control" id="name" aria-describedby="name" placeholder="Name">
 			</div>
 		</div>
 		<div class="row">
 			<div class="form-group">
-			    <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Email">
+				<input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Email">
 			</div>
 		</div>
 		<button class="submit" id="login2">Login</button>
-		
+
 		<hr />
 
 		<div class="g-signin2" data-onsuccess="onSignIn">
 			<iframe class="g-signin2" src="https://developers.google.com/identity/sign-in/web/demos/signin_contextual_simple.jshtml?hl=en" style="width: 75%;
 			height: 60px;"></iframe>
-			<div class="row">
-				<div class="col-xs-8">
-					<button class= "submit submitCredentials" id="login2">Login</button>
+				<div class="row">
+					<div class="col-xs-8">
+						<button class="submit submitCredentials" id="login2">Login</button>
+					</div>
 				</div>
-			</div>
-			
-			<hr />
+
+				<hr />
 		</div>
 
 	</div>
 	<!-- =============NEW SECTION==================
 
-	================Seat Info Modal================ 
+	================Seat Info Modal================
 
 	===============================================
 
@@ -182,13 +186,13 @@
 		<h1>Welcome to Darrell K Royal-Texas Memorial Stadium!</h1>
 		<div class="searchbar" id="#autocomplete">
 			<div class="form-group row">
-			    <input class="form-control" type="search" value="Search" id="example-search-input">
+				<input class="form-control" type="search" value="Search" id="example-search-input">
 			</div>
 		</div>
 		<div class="row slots-box">
 			<div class="tix-icons">
 				<div class="col-xs-3 icon flex-container">
-					
+
 					<svg width="40px" height="33px" viewBox="60 342 40 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						<!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
 						<desc>Created with Sketch.</desc>
@@ -207,9 +211,9 @@
 					</svg>
 					<p>Section</p>
 				</div>
-			
+
 				<div class="col-xs-3 icon flex-container">
-					
+
 					<svg width="49px" height="34px" viewBox="135 340 49 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						<!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
 						<desc>Created with Sketch.</desc>
@@ -227,7 +231,7 @@
 					</svg>
 					<p>Row</p>
 				</div>
-			
+
 				<div class="col-xs-3 icon flex-container">
 					<i class="fa fa-ticket" aria-hidden="true" id="ticket"></i>
 					<p>Seat</p>
@@ -252,41 +256,41 @@
 	<div class="col-xs-10 menu-container">
 		<h1 class="menu-heading">Swipe for vendors near you</h1>
 		<div id="menu-carousel" class="carousel slide" data-ride="carousel">
-		  <div class="carousel-inner" role="listbox">
-			<div class="carousel-item active">
-				<h1 class="vendor-name">China Express</h1>
-				<img class="d-block img-fluid" src="http://placehold.it/240x160">
-				<div class="menu-item">
-					<div class="col-xs-5 menu-item-name">
-						<h1 class="menu-item">Egg Roll</h1>
-					</div>
-					<div class="col-xs-2 menu-item-qty">
-						<h1 class="menu-item">2</h1>
-					</div>
-					<div class="col-xs-3">
-						<h1 class="menu-item price">$12.99</h1>
-					</div>
-				</div>
-			</div>
-			<div class="carousel-item">
-			  <!--menu div goes here -->
-				<h1 class="vendor-name">Torchy's Tacos</h1>
-				<img class="d-block img-fluid" src="http://placehold.it/240x160">
-				<div class="menu-item">
-					<div class="col-xs-5 menu-item-name">
-						<h1 class="menu-item">Ranch Hand Taco</h1>
-					</div>
-					<div class="col-xs-2 menu-item-qty">
-						<h1 class="menu-item">3</h1>
-					</div>
-					<div class="col-xs-3">
-						<h1 class="menu-item price">$5.75</h1>
+			<div class="carousel-inner" role="listbox">
+				<div class="carousel-item active">
+					<h1 class="vendor-name">China Express</h1>
+					<img class="d-block img-fluid" src="http://placehold.it/240x160">
+					<div class="menu-item">
+						<div class="col-xs-5 menu-item-name">
+							<h1 class="menu-item">Egg Roll</h1>
+						</div>
+						<div class="col-xs-2 menu-item-qty">
+							<h1 class="menu-item">2</h1>
+						</div>
+						<div class="col-xs-3">
+							<h1 class="menu-item price">$12.99</h1>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="carousel-item">
-			  <!--menu div goes here -->
-			</div>
+				<div class="carousel-item">
+					<!--menu div goes here -->
+					<h1 class="vendor-name">Torchy's Tacos</h1>
+					<img class="d-block img-fluid" src="http://placehold.it/240x160">
+					<div class="menu-item">
+						<div class="col-xs-5 menu-item-name">
+							<h1 class="menu-item">Ranch Hand Taco</h1>
+						</div>
+						<div class="col-xs-2 menu-item-qty">
+							<h1 class="menu-item">3</h1>
+						</div>
+						<div class="col-xs-3">
+							<h1 class="menu-item price">$5.75</h1>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<!--menu div goes here -->
+				</div>
 			</div>
 			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -332,15 +336,16 @@
 			<p id="bottom-text">Enjoy the show!</p>
 		</div>
 	</div>
-	
-	
+
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script>
-		$('.carousel').carousel(/*{array.length}*/);
+		$('.carousel').carousel( /*{array.length}*/ );
 	</script>
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<script src="https://use.fontawesome.com/26e56c5853.js"></script>
 	<script src="js/ui.js"></script>
 </body>
+
 </html>
