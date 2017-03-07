@@ -7,17 +7,34 @@ var seats;
 // Vendor Variables
 var vendorInfo;
 
+// Google Signin Functions
+function onSignIn(googleUser) {
+	var profile = googleUser.getBasicProfile();
+	console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+	console.log('Name: ' + profile.getName());
+	console.log('Image URL: ' + profile.getImageUrl());
+	console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+
+function signOut() {
+	var auth2 = gapi.auth2.getAuthInstance();
+	auth2.signOut().then(function () {
+		console.log('User signed out.');
+	});
+}
+
+// Database to HTML interaction
 function getVenueInfo() {
-    var query = "/api/getvenueinfo/" + selectedVenue;
-    $.get(query, function(data) {
-        sections = data.sections;
-        rows = data.sections;
-        seats = data.seats;
+	var query = "/api/getvenueinfo/" + selectedVenue;
+	$.get(query, function(data) {
+		sections = data.sections;
+		rows = data.sections;
+		seats = data.seats;
 
 		/*
 		Use this area to write JQuery to fill in information for the dropdown menus for section/row/seat number
 		*/
-    });
+	});
 }
 
 function getMenus() {
