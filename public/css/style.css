@@ -1,10 +1,10 @@
 body {
-	background-image: url("../images/resize-iphone.jpg");
+	background-image: url("../images/Darrell_K_Royal-Texas_Memorial_Stadium_at_Night.jpg");
 	background-color: #222222;
 	/* resize-iphone: */
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-size: 322px 574px;
+	background-size: 100% 100%;
 	font-family: 'Roboto', sans-serif;
 	font-family: 'Signika', sans-serif;
 }
@@ -15,26 +15,30 @@ div.logo {
 }
 
 button#login {
-	/* Rectangle 2: */
 	background: #5E71F9;
 	border-radius: 8px;
-	/* Login: */
+	border: solid 2px;
 	font-family: Roboto-Medium;
 	font-size: 20px;
 	color: #FFFFFF;
+	position: relative;
+	max-width: 240px;
+	left: -60%;
+	margin: auto;
+	float: right;
 }
 
 button#signup {
-	/* Rectangle 2: */
 	border: 2px solid #3AD83A;
 	border-radius: 8px;
-	/* Sign up: */
 	font-family: Roboto-Medium;
 	font-size: 20px;
 	color: #FFFFFF;
 	background-color: transparent;
 	position: relative;
-	left: 37px;
+	left: 60%;
+	max-width: 240px;
+	margin: auto;
 }
 
 button {
@@ -43,7 +47,7 @@ button {
 }
 
 .welcome {
-	padding-top: 40%;
+	padding-top: 200px;
 	text-align: center;
 	margin: auto;
 	/* float: none; */
@@ -58,24 +62,24 @@ h1 {
 	text-align:center;
 }
 
-.button-container {
-	bottom: 0;
-	margin: 0 auto;
-	width: 60%;
-	display: block;
-	padding-top: 30%;
+.buttons {
+	margin: auto;
+	width: 100%;
+	padding-top: 170px;
+	position: fixed;
+	bottom: 40px;
 }
 
 .submit {
-	/* Rectangle 4: */
 	background: #3AD83A;
 	border-radius: 8px;
-	/* Submit: */
 	font-family: Roboto-Medium;
 	font-size: 19px;
 	color: #FFFFFF;
-	width: 100%;
-	margin: 14% 10%;
+	width: 79%;
+	margin: auto;
+	position: relative;
+	left: 10.3%;
 }
 
 .dropdown {
@@ -233,12 +237,38 @@ h1.price {
 }
 
 .welcome-container {
-	position:relative;
-	float:none;
+	position: relative;
+	float: none;
+	background-blend-mode: overlay;
+	/* text-align: center; */
+	background-color: black;
+	background: rgba(0, 0, 0, 0.5);
+	height:100vh;
 }
 
 .form-group {
-	width: 100%;
+	width: 75%;
 	margin: auto;
-	padding: 2% 0 4%;
+	padding: 8px 0 4%;
+}
+
+iframe.g-signin2 {
+	width: 75%;
+	height: 60px;
+	border: none;
+	margin: auto;
+	position: relative;
+	left: 25%;
+	right: 25%;
+}
+
+div.g-signin2 {
+	margin: auto;
+	width: 75%;
+}
+
+@media screen and (max-width: 640px) {
+	body {
+		background-image: url("../images/DKRsmall.jpg");
+	}
 }
