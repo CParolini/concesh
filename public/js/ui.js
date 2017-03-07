@@ -23,7 +23,27 @@ function signOut() {
 	});
 }
 
-// Database to HTML interaction
+function onSuccess(googleUser) {
+	console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+}
+
+function onFailure(error) {
+	console.log(error);
+}
+
+function renderButton() {
+	gapi.signin2.render('my-signin2', {
+		'scope': 'profile email',
+		'width': 240,
+		'height': 50,
+		'longtitle': true,
+		'theme': 'dark',
+		'onsuccess': onSuccess,
+		'onfailure': onFailure
+	});
+}
+
+// Database to HTML interaction functions
 function getVenueInfo() {
 	var query = "/api/getvenueinfo/" + selectedVenue;
 	$.get(query, function(data) {
@@ -63,16 +83,8 @@ $(document).ready(function(){
 		$(".login-container").show();
 	});
 
-	// Initial signup button click
-	$("#signup").click(function() {
-		$(".welcome-container").hide();
-		$(".buttons").hide();
-		$(".search-container").hide();
-		$(".regform-container").show();
-	});
-
 	// Submits credentials after login or registration and sends user to seat selection
-	$(".submitCredentials").click(function() {
+	$("#submitCredentials").click(function() {
 		$(".regform-container").hide();
 		$(".login-container").hide();
 		$(".search-container").show();

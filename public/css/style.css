@@ -28,19 +28,6 @@ button#login {
 	float: right;
 }
 
-button#signup {
-	border: 2px solid #3AD83A;
-	border-radius: 8px;
-	font-family: Roboto-Medium;
-	font-size: 20px;
-	color: #FFFFFF;
-	background-color: transparent;
-	position: relative;
-	left: 60%;
-	max-width: 240px;
-	margin: auto;
-}
-
 button {
 	height:40px;
 	width:100px;
@@ -230,6 +217,7 @@ h1.price {
 
 .login-container {
 	display:none;
+	margin-top: 30%;
 }
 
 .checkout-modal {
