@@ -1,5 +1,5 @@
 body {
-	background-image: url("images/resize-iphone.jpg");
+	background-image: url("../images/resize-iphone.jpg");
 	background-color: #222222;
 	/* resize-iphone: */
 	background-repeat: no-repeat;
@@ -139,6 +139,10 @@ h1 {
 	border-radius: 30px;
 	width:100%;
 	display:none;
+}
+
+h1.menu-heading {
+	color: #000000;
 }
 
 h1.vendor-name {
