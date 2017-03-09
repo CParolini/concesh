@@ -8,6 +8,15 @@ var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 var db = require("./models");
+var charge = require("./charge");
+app.post('./charge', (req, res, next) => {
+  charge(req).then(data => {
+    res.render('thanks');
+  }).catch(error => {
+    res.render('error', error);
+  });
+});
+
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());

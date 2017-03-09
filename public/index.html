@@ -218,6 +218,18 @@
 	</div>
 
 	<!-- THIS IS THE CHECKOUT MODAL -->
+	<form action="/charge" method="POST">
+      <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_0IoQ5T45UO7CxJnvKMmJ0l0n"
+    data-amount= "999"
+    data-name="Demo Site"
+    data-description="Widget"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-label="Foooood"
+    data-locale="auto">
+      </script>
+    </form>
 
 	<div class=checkout-modal id="checkout-modal">
 		<div class="row">
