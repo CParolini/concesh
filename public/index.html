@@ -199,7 +199,7 @@
 
 		<div class="row">
 			<div class="col-xs-8">
-				<button class="submit" id="checkout">Checkout
+				<button class="submit" id="checkout">Go to Checkout
 					<svg width="57px" height="31px" viewBox="191 483 57 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						<!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
 						<desc>Created with Sketch.</desc>
@@ -219,17 +219,16 @@
 
 	<!-- THIS IS THE CHECKOUT MODAL -->
 
-
 	<div class=checkout-modal id="checkout-modal">
 	<form action="/charge" method="POST">
       <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="pk_test_0IoQ5T45UO7CxJnvKMmJ0l0n"
     data-amount= "999"
-    data-name="Demo Site"
-    data-description="Widget"
+    data-name="Order"
+    data-description="[append item names here]"
     data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-    data-label="Foooood"
+    data-label="Pay Here"
     data-locale="auto">
       </script>
     </form>
