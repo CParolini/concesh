@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="google-signin-client_id" content="911476103780-5im21hafg5fpq9vig2lna1ifbj8k7eea.apps.googleusercontent.com">
 	<title>Concesh</title>
 	<link rel=stylesheet href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel=stylesheet href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,17 +12,6 @@
 </head>
 
 <body>
-	<div id="fb-root"></div>
-	<script>
-		(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s);
-			js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script>
 
 	<!-- FIRST SECTION -->
 	<!-- WELCOME PAGE -->
@@ -48,108 +38,22 @@
 					</g>
 				</svg>
 		</div>
-	</div>
-	<h1 class="welcome">Welcome to Darrell K Royal-Texas Memorial Stadium!</h1>
-	<div class="buttons">
-		<button id="login">Login</button>
-		<button id="signup">Sign up</button>
-	</div>
-	</div>
-
-	<!-- =============NEW SECTION==================
-
-	================.REGISTER FORM.================
-
-	===============================================
-
-	-->
-
-	<div class="regform-container">
-		<h1>Enter your information</h1>
-		<div class="row">
-			<div class="col-xs-8">
-				<div class="form-group">
-					<label for="name">Name</label>
-					<input type="name" class="form-control" id="name" aria-describedby="name" placeholder="Name">
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-2">
-				<div class="dropdown">
-					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-					U.S.
-					<span class="caret"></span>
-				  </button>
-					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#">Separated link</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-xs-6">
-				<div class="form-group">
-					<input type="name" class="form-control" id="name" aria-describedby="name" placeholder="+1">
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-8">
-				<div class="form-group">
-					<input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Email">
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-xs-8">
-				<button class="submit submitCredentials">Submit</button>
-			</div>
-		</div>
-
-		<hr />
-
-		<div class="row">
-			<div class="g-signin2" data-onsuccess="onSignIn">
-				<iframe src="https://developers.google.com/identity/sign-in/web/demos/signin_contextual_simple.jshtml?hl=en" style="width: 200px;
-				height: 60px;"></iframe>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false">Log in with Facebook</div>
+		<div class="buttons">
+			<button id="login">Sign-in</button>
 		</div>
 	</div>
 
 	<!-- ============THIS IS THE LOGIN SECTION=============== -->
 
 	<div class="login-container">
-		<h1>Sign in to your account</h1>
-		<div class="row">
-			<div class="form-group">
-				<input type="name" class="form-control" id="name" aria-describedby="name" placeholder="Name">
-			</div>
-		</div>
-		<div class="row">
-			<div class="form-group">
-				<input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Email">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-8">
-				<button class="submit submitCredentials" id="login2">Login</button>
-			</div>
-		</div>
-
-		<hr />
-
 		<div class="g-signin2" data-onsuccess="onSignIn">
 			<iframe class="g-signin2" src="https://developers.google.com/identity/sign-in/web/demos/signin_contextual_simple.jshtml?hl=en" style="width: 75%;
 			height: 60px;"></iframe>
-				<hr />
+		</div>
+		<a href="#" onclick="signOut();">Sign out</a>
+		<hr />
+		<div class="row">
+			m<button class="submit" id="submitCredentials">Login</button>
 		</div>
 	</div>
 
