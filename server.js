@@ -1,7 +1,6 @@
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser')
-const hbs = require('express-hbs');
 const dotenv = require('dotenv');
 
 // note that we load the process.env from `dotenv`
@@ -19,12 +18,6 @@ const charge = require('./charge');
 // create the server, and all the routes and configuration
 // go against this `app`
 const app = express();
-
-// render using handlebars, but use .html as the extention
-app.engine('html', hbs.express3({ extname: '.html' }));
-app.set('view engine', 'html');
-app.set('views', __dirname);
-app.disable('x-powered-by');
 
 // expose `process` to the view templates
 app.locals.process = process;
