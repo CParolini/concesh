@@ -46,7 +46,6 @@ function getMenus() {
 			Use this area to write JQuery to fill in the carousel with each vendor and corresponding menu.
 			*/
 			console.log(vendorInfo[i]);
-			// $('.carousel-inner').data(vendorInfo[i]);
 		}
     });
 }
@@ -57,8 +56,7 @@ $(document).ready(function(){
 	$(".welcome").remove();
 	$("#checkout").hide();
 	$(".abcRioButtonContentWrapper").show();
-	// $("#login").hide();
-	// $("#signup").hide();
+	$(".searchTitle").hide();
 
 	// Initial login button click
 	$("#login").click(function() {
@@ -69,12 +67,26 @@ $(document).ready(function(){
 		$(".login-container").show();
 	});
 
+	$(".torchyIcon").click(function(){
+		$(".torchy").show();
+		$(".cucina").hide();
+		$(".torchyIcon").css("background", "white");
+		$(".cucinaIcon").css("background", "black");
+	});
+
+	$(".cucinaIcon").click(function(){
+		$(".torchy").hide();
+		$(".cucina").show();
+		$(".cucinaIcon").css("background", "white");
+		$(".torchyIcon").css("background", "black");
+	});
+
 	// Submits credentials after login or registration and sends user to seat selection
 	$(".g-signin2").click(function() {
-
 		$(".regform-container").hide();
 		$(".login-container").hide();
 		$(".search-container").show();
+		$(".searchTitle").show();
 
 		// Fill in dropdown menu for section/row/seat
 		getVenueInfo();
@@ -83,6 +95,7 @@ $(document).ready(function(){
 	$(".search-submit").click(function(){
 		$(".search-container").hide();
 		$(".tix-info-container").show();
+		$(".searchTitle").hide();
 	});
 
 	$(".search-submit").click(function(){
