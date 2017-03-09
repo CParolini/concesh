@@ -45,7 +45,7 @@ function signOut() {
 
 function checkIfLoggedIn() {
 	if (profile) {
-		console.log("Signed in as ");
+		console.log("Signed in");
 		$("#submitCredentials").show();
 		$("#signout").show();
 		$(".current-user-container").show();
@@ -56,7 +56,6 @@ function checkIfLoggedIn() {
 		console.log("Not signed in")
 		$("#signout").hide();
 		$("#submitCredentials").hide();
-		$("#signout").hide();
 		$(".current-user-container").hide();
 	}
 }
