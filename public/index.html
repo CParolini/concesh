@@ -218,6 +218,9 @@
 	</div>
 
 	<!-- THIS IS THE CHECKOUT MODAL -->
+
+
+	<div class=checkout-modal id="checkout-modal">
 	<form action="/charge" method="POST">
       <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -230,8 +233,6 @@
     data-locale="auto">
       </script>
     </form>
-
-	<div class=checkout-modal id="checkout-modal">
 		<div class="row">
 			<p>Your order will be ready in:</p>
 			<i class="icon-remove-sign" id="x"></i>

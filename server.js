@@ -1,39 +1,57 @@
-// Dependencies
-var express = require("express");
-var bodyParser = require("body-parser");
+const path = require('path');
+const express = require('express');
+const bodyParser = require('body-parser')
+const hbs = require('express-hbs');
+const dotenv = require('dotenv');
 
-// Sets up the Express App
-var app = express();
-var PORT = process.env.PORT || 8080;
+// note that we load the process.env from `dotenv`
+// before we start to load any of our own code.
+const envfile = process.env.NODE_ENV === 'production' ? '.env' : '.dev.env';
+dotenv.config({
+  silent: true,
+  path: `${__dirname}/${envfile}`,
+});
 
-// Requiring our models for syncing
-var db = require("./models");
-var charge = require("./charge");
-app.post('./charge', (req, res, next) => {
+// *now* load our custom Stripe charing module
+// which we'll use in the router later on
+const charge = require('./charge');
+
+// create the server, and all the routes and configuration
+// go against this `app`
+const app = express();
+
+// render using handlebars, but use .html as the extention
+app.engine('html', hbs.express3({ extname: '.html' }));
+app.set('view engine', 'html');
+app.set('views', __dirname);
+app.disable('x-powered-by');
+
+// expose `process` to the view templates
+app.locals.process = process;
+
+// serve static assets
+app.use(express.static(path.join(__dirname, 'public')));
+
+// enable the body parser middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// the router
+
+// GET /
+app.get('/', (req, res) => {
+  res.render('index');
+});
+
+// POST /charge
+app.post('/charge', (req, res, next) => {
   charge(req).then(data => {
-    res.render('thanks');
+    res.render('./public/thanks');
   }).catch(error => {
     res.render('error', error);
   });
 });
 
-
-// Sets up the Express app to handle data parsing
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json" }));
-
-// Static directory
-app.use(express.static("./public"));
-
-// Import routes and give the server access to them.
-require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
-
-// Syncing our sequelize models and then starting our express app
-db.sequelize.sync().then(function() {
-	app.listen(PORT, function() {
-		console.log("App listening on PORT " + PORT);
-	});
+// start
+app.listen(process.env.PORT || 8080, () => {
+  console.log('Listening');
 });
