@@ -87,37 +87,37 @@ h1 {
 }
 
 .tix-info-container {
-	/* Rectangle: */
-	background: #000000;
-	border: 0 solid #FFFFFF;
-	box-shadow: 3px 3px 1px 0 rgba(0,0,0,0.50);
-	border-radius: 8px;
-	border-color:white;
 	width: 100%;
-	height: 480px;
+	height: 100vh;
 	padding-top: 40px;
-	display:none;
+	display: none;
+	margin: auto;
+	background: rgba(0, 0, 0, 0.5);
 }
 
-.slots-box {
-	/* Rectangle 3: */
-	background: #F1F1F1;
-	border: 1px solid #979797;
-	border-radius: 8px;
-	width:100%;
-	height:60%;
-	margin: 0 auto;
+.section-icon {
+	width:40px;
+	height: 33px;
+	margin: auto;
+	padding-top: 20px;
 }
 
-.tix-icons {
-	/* Rectangle 2: */
-	background: #4A4A4A;
-	/* border: .5px solid #979797; */
-	position: relative;
-	bottom: 0;
-	top: 71%;
-	right: 1px;
-	width: 100.3%;
+.row-icon {
+	width: 49px;
+	height: 34px;
+	margin: auto;
+	padding-top: 20px;
+}
+
+.seat-icon {
+	margin:auto;
+	padding-top: 20px;
+	text-align: center;
+}
+
+button.btn.btn-secondary.btn-lg.dropdown-toggle {
+    color: #3AD83A;
+    z-index:1;
 }
 
 .icon {
@@ -174,7 +174,7 @@ h1.price {
 
 #ticket {
 	font-size: 38px;
-	color:black;
+	color:#3AD83A;
 }
 
 .flex-container {
@@ -265,6 +265,10 @@ iframe.g-signin2 {
 div.g-signin2 {
 	margin: auto;
 	width: 75%;
+}
+
+.form-group label {
+	color:#3AD83A;
 }
 
 @media screen and (max-width: 640px) {

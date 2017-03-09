@@ -34,6 +34,18 @@ function getVenueInfo() {
 		/*
 		Use this area to write JQuery to fill in information for the dropdown menus for section/row/seat number
 		*/
+		// var sectionMenuDiv = $("<div>").attr("id", "sectionMenuDiv")
+		// var sectionHead = $("<label for='exampleSelect1'>Section</label>");
+		// var select = "<select class='form-control'>";
+		// var sectionOption = $("<option>").attr("id", "[i]");
+		// sectionMenuDiv.addClass("form-group");
+		// sectionMenuDiv.append(sectionHead);
+		// sectionMenuDiv.append(select);
+		// for (var i = 0; i < 10; i++) {
+		// 	select.append(sectionOption);
+		// 	sectionOption.append("1");
+		// };
+		// $("#tix-info-container").append(sectionMenuDiv);
 	});
 }
 
@@ -60,6 +72,7 @@ $(document).ready(function(){
 		$(".welcome").hide();
 		$(".search-container").hide();
 		$(".login-container").show();
+		$(".buttons").hide();
 	});
 
 	// Initial signup button click
@@ -76,13 +89,22 @@ $(document).ready(function(){
 		$(".search-container").show();
 
 		// Fill in dropdown menu for section/row/seat
-		getVenueInfo();
+
 	});
 
 	$(".search-submit").click(function(){
 		$(".search-container").hide();
 		$(".tix-info-container").show();
+
 	});
+
+	var optionItem = $("<option>");
+	// optionItem.addClass("optionItem");
+	for (var i = 1; i <= 10; i++) {
+		console.log("hello");
+		optionItem.text(i);
+		$("select.form-control").append(optionItem);
+	};
 
 	// Submit seat info and shows menus
 	$("#tix-submit").click(function() {
