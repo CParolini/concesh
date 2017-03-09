@@ -52,9 +52,6 @@
 		</div>
 		<a href="#" onclick="signOut();">Sign out</a>
 		<hr />
-		<div class="row">
-			m<button class="submit" id="submitCredentials">Login</button>
-		</div>
 	</div>
 
 	<!-- =============NEW SECTION==================
@@ -149,42 +146,18 @@
 	-->
 
 	<div class="col-xs-10 menu-container">
-		<h1 class="menu-heading">Swipe for vendors near you</h1>
-		<div id="menu-carousel" class="carousel slide" data-ride="carousel">
+		<h1 class="menu-heading">Click for vendors near you</h1>
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="torchyIcon"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1" class="cucinaIcon"></li>
+			</ol>
 			<div class="carousel-inner" role="listbox">
-				<div class="carousel-item active">
-					<h1 class="vendor-name">China Express</h1>
-					<img class="d-block img-fluid" src="http://placehold.it/240x160">
-					<div class="menu-item">
-						<div class="col-xs-5 menu-item-name">
-							<h1 class="menu-item">Egg Roll</h1>
-						</div>
-						<div class="col-xs-2 menu-item-qty">
-							<h1 class="menu-item">2</h1>
-						</div>
-						<div class="col-xs-3">
-							<h1 class="menu-item price">$12.99</h1>
-						</div>
-					</div>
+				<div class="carousel-item">
+					<input type="image" class="d-block img-fluid torchy" src="http://thegkwco.com/wp-content/uploads/2014/02/torchy.png" alt="Torchy's Tacos">
 				</div>
 				<div class="carousel-item">
-					<!--menu div goes here -->
-					<h1 class="vendor-name">Torchy's Tacos</h1>
-					<img class="d-block img-fluid" src="http://placehold.it/240x160">
-					<div class="menu-item">
-						<div class="col-xs-5 menu-item-name">
-							<h1 class="menu-item">Ranch Hand Taco</h1>
-						</div>
-						<div class="col-xs-2 menu-item-qty">
-							<h1 class="menu-item">3</h1>
-						</div>
-						<div class="col-xs-3">
-							<h1 class="menu-item price">$5.75</h1>
-						</div>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<!--menu div goes here -->
+					<input type="image" class="d-block img-fluid cucina" src="https://pbs.twimg.com/profile_images/663745826565550080/KxEmCN7m.png" alt="La Cucina Italian">
 				</div>
 			</div>
 			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -196,10 +169,11 @@
 				<span class="sr-only">Next</span>
 			</a>
 		</div>
+	</div>
 
-		<div class="row">
-			<div class="col-xs-8">
-				<button class="submit" id="checkout">Checkout
+	<div class="row">
+		<div class="col-xs-8">
+			<button class="submit" id="checkout">Checkout
 					<svg width="57px" height="31px" viewBox="191 483 57 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						<!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
 						<desc>Created with Sketch.</desc>
@@ -213,8 +187,8 @@
 						</g>
 					</svg>
 				</button>
-			</div>
 		</div>
+	</div>
 	</div>
 
 	<!-- THIS IS THE CHECKOUT MODAL -->

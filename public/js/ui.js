@@ -45,6 +45,8 @@ function getMenus() {
 			/*
 			Use this area to write JQuery to fill in the carousel with each vendor and corresponding menu.
 			*/
+			console.log(vendorInfo[i]);
+			// $('.carousel-inner').data(vendorInfo[i]);
 		}
     });
 }
@@ -53,6 +55,10 @@ $(document).ready(function(){
 
 	$(".search-container").hide();
 	$(".welcome").remove();
+	$("#checkout").hide();
+	$(".abcRioButtonContentWrapper").show();
+	// $("#login").hide();
+	// $("#signup").hide();
 
 	// Initial login button click
 	$("#login").click(function() {
@@ -64,7 +70,8 @@ $(document).ready(function(){
 	});
 
 	// Submits credentials after login or registration and sends user to seat selection
-	$("#submitCredentials").click(function() {
+	$(".g-signin2").click(function() {
+
 		$(".regform-container").hide();
 		$(".login-container").hide();
 		$(".search-container").show();
@@ -78,19 +85,42 @@ $(document).ready(function(){
 		$(".tix-info-container").show();
 	});
 
+	$(".search-submit").click(function(){
+		$("body").css("background-image", "url(../images/DKRsmall.jpg)");
+	});
+
 	// Submit seat info and shows menus
 	$("#tix-submit").click(function() {
 		$(".tix-info-container").hide();
 		$(".menu-container").show();
+		$(".torchy").show();
+		$(".cucina").hide();
+		$("#checkout").show();
+		$(".torchyIcon").css("background", "white");
 
 		// Fill in vendor and menu item information
 		getMenus();
+	});
+
+	$(".torchy").click(function() {
+		$(".torchy").hide();
+		$(".cucina").show();
+		$(".cucinaIcon").css("background", "white");
+		$(".torchyIcon").css("background", "black");
+	});
+
+	$(".cucina").click(function() {
+		$(".torchy").show();
+		$(".cucina").hide();
+		$(".torchyIcon").css("background", "white");
+		$(".cucinaIcon").css("background", "black");
 	});
 
 	// Checkout and send payment
 	$("#checkout").click(function() {
 		$(".tix-info-container").hide();
 		$(".menu-container").hide();
+		$("#checkout").hide();
 		$("#checkout-modal").show();
 	});
 });
