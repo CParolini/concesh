@@ -37,9 +37,6 @@ app.use(express.static("./public"));
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
-// expose `process` to the view templates
-app.locals.process = process;
-
 // POST /charge
 app.post('/charge', (req, res, next) => {
   charge(req).then(data => {
