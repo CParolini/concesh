@@ -1,5 +1,5 @@
 const stripe = require('stripe')("sk_test_2hPmvRZOtb9jtLhbazI9YiEr");
-var cartTotal = require("./models/cart.js");
+var cartTotal = require("./cart.js");
 
 module.exports = (req) => {
 

@@ -133,13 +133,11 @@ $(document).ready(function(){
 	
 
 	$("#checkout").click(function() {
-<<<<<<< HEAD
+
 
 		$(".stripe-button-el").hide();
 		$(".stripe-button-el").trigger("click");
 		$(".tix-info-container").hide();
-=======
->>>>>>> origin/master
 		$(".menu-container").hide();
 		$("#checkout-modal").show();
 
