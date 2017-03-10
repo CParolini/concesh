@@ -64,20 +64,30 @@ function checkIfLoggedIn() {
 function getVenueInfo() {
 	var query = "/api/getvenueinfo/" + selectedVenue;
 	$.get(query, function(data) {
-		sections = data.sections;
-		rows = data.sections;
-		seats = data.seats;
+		sections = data[0].sections;
+		rows = data[0].sections;
+		seats = data[0].seats;
+		var optionItem = $("<option>");
+		// optionItem.addClass("optionItem");
+		for (var i = 1; i <= sections; i++) {
+			optionItem.text(i);
+			$("select.form-control").append(optionItem);
+		};
 	});
 }
 
 function getMenus() {
+	// First gets the vendors associtated with the selected venue
     var query = "/api/getvendors/" + selectedVenue;
     $.get(query, function(data) {
         vendorInfo = data;
 		for(var i=0; i<vendorInfo.length; i++) {
-			/*
-			Use this area to write JQuery to fill in the carousel with each vendor and corresponding menu.
-			*/
+			// Then gets items associated with each vendor
+			var vendorQuery = "/api/getitems/" + vendorInfo[i].id;
+			$.get(vendorQuery, function(vendorData) {
+				console.log(vendorData);
+				// Chris this vendorData variable is an array that contains all of the information for this vendor.
+			})
 		}
     });
 }
@@ -108,14 +118,6 @@ $(document).ready(function(){
 		$(".tix-info-container").show();
 		getVenueInfo();
 	});
-
-	var optionItem = $("<option>");
-	// optionItem.addClass("optionItem");
-	for (var i = 1; i <= 10; i++) {
-		console.log("hello");
-		optionItem.text(i);
-		$("select.form-control").append(optionItem);
-	};
 
 	// Submit seat info and shows menus
 	$("#tix-submit").click(function() {
