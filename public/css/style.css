@@ -132,7 +132,7 @@ button.btn.btn-secondary.btn-lg.dropdown-toggle {
 }
 
 h1.menu-heading {
-    color: #000000;
+    color: white;
 }
 
 h1.vendor-name {
@@ -283,8 +283,28 @@ h1.price {
     margin-bottom: 40px;
 }
 
+.cucinaMenu {
+    margin: 0px 0px 140px 0px;
+    color: white;
+}
+
+.torchyMenu {
+    margin: 0px 0px 140px 0px;
+    color: white;
+}
+
+.orderQty {
+    color: black;
+    opacity: 0.75;
+    float: right;
+    position: absolute;
+    right: 20px;
+    margin-top: -20px;
+    height: 18px;
+}
+
 @media screen and (max-width: 640px) {
     body {
-        background-image: url("../images/DKRsmall.jpg");
+        background-image: url("../images/resize-iphone.jpg");
     }
 }

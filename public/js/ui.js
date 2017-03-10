@@ -85,11 +85,23 @@ function getMenus() {
     $.get(query, function(data) {
         vendorInfo = data;
         for (var i = 0; i < vendorInfo.length; i++) {
+            console.log(vendorInfo[i]);
             // Then gets items associated with each vendor
             var vendorQuery = "/api/getitems/" + vendorInfo[i].id;
             $.get(vendorQuery, function(vendorData) {
-                console.log(vendorData);
-                // Chris this vendorData variable is an array that contains all of the information for this vendor.
+                for (var j = 0; j < vendorData.length; j++) {
+                    console.log(vendorData[j]);
+                    $(".torchyMenu").append("<li>" + vendorData[j].item_name + " " + "$" + vendorData[j].item_price + "</li><select class='orderQty'><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select>");
+                    $(".cucinaMenu").append("<li>" + vendorData[j].item_name + " " + "$" + vendorData[j].item_price + "</li><select class='orderQty'><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select>");
+                    // Chris this vendorData variable is an array that contains all of the information for this vendor.
+                    $('#checkout').click(function() {
+                        var qty = $('.orderQty option:selected').val();
+                        console.log(qty);
+                        var price = vendorData.item_price;
+                        var output = qty * price;
+                        // $('#output').text(output.toFixed(2));
+                    });
+                }
             });
         }
     });
@@ -98,7 +110,7 @@ function getMenus() {
 $(document).ready(function() {
 
     $(".search-container").hide();
-     $("#checkout").hide();
+    $("#checkout").hide();
 
     // Initial start button click
     $("#start").click(function() {
@@ -130,6 +142,8 @@ $(document).ready(function() {
         $(".menu-container").show();
         $(".torchy").show();
         $(".cucina").hide();
+        $(".torchyMenu").show();
+        $(".cucinaMenu").hide();
         $(".torchyIcon").css("background", "white");
         $("#checkout").show();
 
@@ -147,6 +161,8 @@ $(document).ready(function() {
     $(".torchyIcon").click(function() {
         $(".torchy").show();
         $(".cucina").hide();
+        $(".torchyMenu").show();
+        $(".cucinaMenu").hide();
         $(".torchyIcon").css("background", "white");
         $(".cucinaIcon").css("background", "black");
     });
@@ -154,6 +170,8 @@ $(document).ready(function() {
     $(".cucinaIcon").click(function() {
         $(".torchy").hide();
         $(".cucina").show();
+        $(".torchyMenu").hide();
+        $(".cucinaMenu").show();
         $(".cucinaIcon").css("background", "white");
         $(".torchyIcon").css("background", "black");
     });
@@ -170,6 +188,10 @@ $(document).ready(function() {
         $(".cucina").hide();
         $(".torchyIcon").css("background", "white");
         $(".cucinaIcon").css("background", "black");
+    });
+
+    $(".search-submit").click(function() {
+        $('body').css("background-image", "url(../images/DKRsmall.jpg)");
     });
 
 });
