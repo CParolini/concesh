@@ -265,6 +265,10 @@ h1.price {
 	color:#3AD83A;
 }
 
+.orderReady {
+	display: none;
+}
+
 @media screen and (max-width: 640px) {
 	body {
 		background-image: url("../images/DKRsmall.jpg");
