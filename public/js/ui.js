@@ -106,10 +106,16 @@ $(document).ready(function(){
 	$(".search-submit").click(function(){
 		$(".search-container").hide();
 		$(".tix-info-container").show();
-
-		// Fill in dropdown menu for section/row/seat
 		getVenueInfo();
 	});
+
+	var optionItem = $("<option>");
+	// optionItem.addClass("optionItem");
+	for (var i = 1; i <= 10; i++) {
+		console.log("hello");
+		optionItem.text(i);
+		$("select.form-control").append(optionItem);
+	};
 
 	// Submit seat info and shows menus
 	$("#tix-submit").click(function() {
