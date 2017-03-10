@@ -45,7 +45,7 @@ app.get('/', (req, res) => {
 // POST /charge
 app.post('/charge', (req, res, next) => {
   charge(req).then(data => {
-    res.render('./public/thanks');
+    console.log("It worked!");
   }).catch(error => {
     res.render('error', error);
   });

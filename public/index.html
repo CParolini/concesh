@@ -9,6 +9,9 @@
 	<link rel=stylesheet href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700|Signika:600,700" rel="stylesheet">
 	<link rel=stylesheet href="css/style.css">
+	<script src="https://js.stripe.com/v2/"></script>
+	<script src="https://js.stripe.com/v3/"></script>
+	<script src="./stripeform.js"></script>
 </head>
 
 <body>
@@ -220,18 +223,21 @@
 	<!-- THIS IS THE CHECKOUT MODAL -->
 
 	<div class=checkout-modal id="checkout-modal">
-	<form action="/charge" method="POST">
-      <script
-    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="pk_test_0IoQ5T45UO7CxJnvKMmJ0l0n"
-    data-amount= "999"
-    data-name="Order"
-    data-description="[append item names here]"
-    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-    data-label="Pay Here"
-    data-locale="auto">
-      </script>
-    </form>
+		<div id="stripeCharge">	
+			<form id="sForm" action="/charge" method="POST">
+       	 		<script
+        		src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        		data-key="pk_test_0IoQ5T45UO7CxJnvKMmJ0l0n"
+        		data-panel-label="Order up!"
+        		data-bitcoin="false"
+        		data-name="Concesh"
+        		data-description="Checkout"
+        		data-image="./images/logo.png"
+        		data-locale="auto">
+        		</script>
+   			 </form>
+		</div>
+
 		<div class="row">
 			<p>Your order will be ready in:</p>
 			<i class="icon-remove-sign" id="x"></i>
@@ -244,7 +250,7 @@
 		</div>
 	</div>
 
-
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script>

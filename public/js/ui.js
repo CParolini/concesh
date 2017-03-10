@@ -88,11 +88,18 @@ $(document).ready(function(){
 	});
 
 	// Checkout and send payment
+
+	
+
 	$("#checkout").click(function() {
+
+		$(".stripe-button-el").hide();
+		$(".stripe-button-el").trigger("click");
 		$(".tix-info-container").hide();
 		$(".menu-container").hide();
 		$("#checkout-modal").show();
-	});
+
+	}); 
 });
 
 // Google autocomplete search that pulls information for the location that is chosen by the user. We will use the longitude and lattitude to locate the venue.

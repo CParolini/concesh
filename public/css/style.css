@@ -169,6 +169,9 @@ h1.price {
 	align-items: center;
 }
 
+/* Stripe stuff*/
+
+
 .checkout-modal {
 	/* Rectangle 6: */
 	background: #000000;
@@ -239,6 +242,7 @@ h1.price {
 	margin: auto;
 	padding: 8px 0 4%;
 }
+
 
 iframe.g-signin2 {
 	width: 75%;
