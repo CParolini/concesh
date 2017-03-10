@@ -53,7 +53,8 @@ function checkIfLoggedIn() {
 		$("#currentUser").append($("<img>",{id:"theImg",src: profile.Paa}));
 		$("#emailReceipt").html("<p>" + profile.U3 + "</p>");
 	} else {
-		console.log("Not signed in")
+		console.log("Not signed in");
+		$("#my-signin2").show();
 		$("#signout").hide();
 		$("#submitCredentials").hide();
 		$(".current-user-container").hide();

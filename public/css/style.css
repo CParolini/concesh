@@ -12,25 +12,21 @@ body {
 div.logo {
 	margin: 0 auto;
 	text-align: center;
+	background-color: black;
+    background: linear-gradient(black, transparent);
 }
 
 button#start {
-	background: #5E71F9;
+	background: transparent;
 	border-radius: 8px;
-	border: solid 2px;
+	border: solid 2px #3AD83A;
 	font-family: Roboto-Medium;
 	font-size: 20px;
 	color: #FFFFFF;
+	width: 100%;
 	position: relative;
-	max-width: 240px;
-	left: -60%;
-	margin: auto;
-	float: right;
-}
-
-button {
-	height:40px;
-	width:100px;
+	left: auto;
+	right: auto;
 }
 
 .welcome {
@@ -39,6 +35,7 @@ button {
 	margin: auto;
 	/* float: none; */
 	max-width: 70%;
+	font-size: 28px;
 }
 
 h1 {
@@ -49,12 +46,39 @@ h1 {
 	text-align:center;
 }
 
+.search-icon {
+	text-align: center;
+	color: #3AD83A;
+	font-size: 27px;
+	background: rgba(0, 0, 0, 0.5);
+}
+
 .buttons {
-	margin: auto;
+    width: 60vw;
+	padding-top: 300px;
+	bottom: 20px;
+	margin: 0 auto;
+	max-width: 310px;
+}
+
+.submit-button-wrapper {
+	position: absolute;
+	bottom: 20px;
 	width: 100%;
-	padding-top: 170px;
-	position: fixed;
-	bottom: 40px;
+}
+
+button.search-submit {
+    width: 75%;
+    margin: 12%;
+    background: #3AD83A;
+    border-radius: 8px;
+    font-family: Roboto-Medium;
+    font-size: 19px;
+    color: #FFFFFF;
+}
+
+.searchbar {
+	padding-top: 30vh;
 }
 
 .submit {
@@ -98,7 +122,6 @@ h1 {
 
 .seat-icon {
 	margin:auto;
-	padding-top: 20px;
 	text-align: center;
 }
 
@@ -162,6 +185,27 @@ h1.price {
 #ticket {
 	font-size: 38px;
 	color:#3AD83A;
+	position: relative;
+	left: 0%;
+	top: 24px;
+}
+
+#tix-submit {
+	position: absolute;
+	left: 10.3%;
+	bottom: 20px;
+}
+
+h1.top {
+	position: absolute;
+	top: -10px;
+	left: 5vw;
+	right: 5vw;
+}
+
+.dropdown-wrapper {
+    position: relative;
+    top: 12vh;
 }
 
 .flex-container {
