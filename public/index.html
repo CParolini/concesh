@@ -85,9 +85,9 @@
 
 	-->
 	<div class="tix-info-container">
-			<h1>Welcome to Darrel K. Royal Memorial Stadium!</h1>
-			<div class="section-icon">
-			    <svg width="40px" height="33px" viewBox="60 342 40 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<h1>Welcome to Darrel K. Royal Memorial Stadium!</h1>
+		<div class="section-icon">
+			<svg width="40px" height="33px" viewBox="60 342 40 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 				    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
 				    <desc>Created with Sketch.</desc>
 				    <defs></defs>
@@ -103,16 +103,16 @@
 				        </g>
 				    </g>
 				</svg>
-			</div>
-			<div class="form-group" id="sectionMenuDiv">
-			    <label for="sectionMenu" class="sectionLabel">Section</label>
-			    <select class="form-control sectionDiv">
-			   
+		</div>
+		<div class="form-group" id="sectionMenuDiv">
+			<label for="sectionMenu" class="sectionLabel">Section</label>
+			<select class="form-control sectionDiv">
+
 			    </select>
-			</div>
-			
-			<div class="row-icon">
-				<svg width="49px" height="34px" viewBox="135 340 49 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		</div>
+
+		<div class="row-icon">
+			<svg width="49px" height="34px" viewBox="135 340 49 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 				    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
 				    <desc>Created with Sketch.</desc>
 				    <defs></defs>
@@ -128,27 +128,27 @@
 				    </g>
 				</svg>
 
-			</div>
-			<div class="form-group" id="rowMenuDiv">
-			    <label for="rowMenu">Row</label>
-			    <select class="form-control">
-			      
-			    </select>
-			</div>
-			
-			<div class="seat-icon">
-				<i class="fa fa-ticket" aria-hidden="true" id="ticket"></i>
-			</div>
-			<div class="form-group" id="seatMenuDiv">
-			    <label for="seatMenu">Seat</label>
-			    <select class="form-control">
-			      
-			    </select>
-			</div>
-			
-			<button class="submit" id="tix-submit">Submit</button>
-			
 		</div>
+		<div class="form-group" id="rowMenuDiv">
+			<label for="rowMenu">Row</label>
+			<select class="form-control">
+
+			    </select>
+		</div>
+
+		<div class="seat-icon">
+			<i class="fa fa-ticket" aria-hidden="true" id="ticket"></i>
+		</div>
+		<div class="form-group" id="seatMenuDiv">
+			<label for="seatMenu">Seat</label>
+			<select class="form-control">
+
+			    </select>
+		</div>
+
+		<button class="submit" id="tix-submit">Submit</button>
+
+	</div>
 
 
 	<!-- =============.NEW SECTION.===============
@@ -159,42 +159,18 @@
 	-->
 
 	<div class="col-xs-10 menu-container">
-		<h1 class="menu-heading">Swipe for vendors near you</h1>
-		<div id="menu-carousel" class="carousel slide" data-ride="carousel">
+		<h1 class="menu-heading">Click Vendor Logo To View Menu</h1>
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="torchyIcon"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1" class="cucinaIcon"></li>
+			</ol>
 			<div class="carousel-inner" role="listbox">
-				<div class="carousel-item active">
-					<h1 class="vendor-name">China Express</h1>
-					<img class="d-block img-fluid" src="http://placehold.it/240x160">
-					<div class="menu-item">
-						<div class="col-xs-5 menu-item-name">
-							<h1 class="menu-item">Egg Roll</h1>
-						</div>
-						<div class="col-xs-2 menu-item-qty">
-							<h1 class="menu-item">2</h1>
-						</div>
-						<div class="col-xs-3">
-							<h1 class="menu-item price">$12.99</h1>
-						</div>
-					</div>
+				<div class="carousel-item">
+					<input type="image" class="d-block img-fluid torchy" src="http://thegkwco.com/wp-content/uploads/2014/02/torchy.png" alt="Torchy's Tacos">
 				</div>
 				<div class="carousel-item">
-					<!--menu div goes here -->
-					<h1 class="vendor-name">Torchy's Tacos</h1>
-					<img class="d-block img-fluid" src="http://placehold.it/240x160">
-					<div class="menu-item">
-						<div class="col-xs-5 menu-item-name">
-							<h1 class="menu-item">Ranch Hand Taco</h1>
-						</div>
-						<div class="col-xs-2 menu-item-qty">
-							<h1 class="menu-item">3</h1>
-						</div>
-						<div class="col-xs-3">
-							<h1 class="menu-item price">$5.75</h1>
-						</div>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<!--menu div goes here -->
+					<input type="image" class="d-block img-fluid cucina" src="http://smakelijk.net/breda/wp-content/uploads/sites/2/2016/02/logo-la-cucina.jpg" alt="La Cucina Italian">
 				</div>
 			</div>
 			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -206,10 +182,11 @@
 				<span class="sr-only">Next</span>
 			</a>
 		</div>
+	</div>
 
-		<div class="row">
-			<div class="col-xs-8">
-				<button class="submit" id="checkout">Go to Checkout
+	<div class="row">
+		<div class="col-xs-8">
+			<button class="submit" id="checkout">Go to Checkout
 					<svg width="57px" height="31px" viewBox="191 483 57 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						<!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
 						<desc>Created with Sketch.</desc>
@@ -223,25 +200,18 @@
 						</g>
 					</svg>
 				</button>
-			</div>
 		</div>
+	</div>
 	</div>
 
 	<!-- THIS IS THE CHECKOUT MODAL -->
 
 	<div class=checkout-modal id="checkout-modal">
-	<form action="/charge" method="POST">
-      <script
-    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="pk_test_0IoQ5T45UO7CxJnvKMmJ0l0n"
-    data-amount= "999"
-    data-name="Order"
-    data-description="[append item names here]"
-    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-    data-label="Pay Here"
-    data-locale="auto">
-      </script>
-    </form>
+		<form action="/charge" method="POST">
+			<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_0IoQ5T45UO7CxJnvKMmJ0l0n" data-amount="999" data-name="Order" data-description="[append item names here]" data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+							data-label="Pay Here" data-locale="auto">
+				</script>
+		</form>
 		<div class="row">
 			<p>Your order will be ready in:</p>
 			<i class="icon-remove-sign" id="x"></i>

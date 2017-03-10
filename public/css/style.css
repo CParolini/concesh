@@ -1,272 +1,290 @@
 body {
-	background-image: url("../images/Darrell_K_Royal-Texas_Memorial_Stadium_at_Night.jpg");
-	background-color: #222222;
-	/* resize-iphone: */
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100% 100%;
-	font-family: 'Roboto', sans-serif;
-	font-family: 'Signika', sans-serif;
+    background-image: url("../images/resize-iphone.jpg");
+    background-color: #222222;
+    /* resize-iphone: */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Signika', sans-serif;
 }
 
 div.logo {
-	margin: 0 auto;
-	text-align: center;
+    margin: 0 auto;
+    text-align: center;
 }
 
 button#start {
-	background: #5E71F9;
-	border-radius: 8px;
-	border: solid 2px;
-	font-family: Roboto-Medium;
-	font-size: 20px;
-	color: #FFFFFF;
-	position: relative;
-	max-width: 240px;
-	left: -60%;
-	margin: auto;
-	float: right;
+    background: #5E71F9;
+    border-radius: 8px;
+    border: solid 2px;
+    font-family: Roboto-Medium;
+    font-size: 20px;
+    color: #FFFFFF;
+    position: relative;
+    max-width: 240px;
+    left: -60%;
+    margin: auto;
+    float: right;
 }
 
 button {
-	height:40px;
-	width:100px;
+    height: 40px;
+    width: 100px;
 }
 
 .welcome {
-	padding-top: 200px;
-	text-align: center;
-	margin: auto;
-	/* float: none; */
-	max-width: 70%;
+    padding-top: 200px;
+    text-align: center;
+    margin: auto;
+    /* float: none; */
+    max-width: 70%;
 }
 
 h1 {
-	/* Welcome to Darrel K.: */
-	font-family: Roboto-Bold;
-	font-size: 20px;
-	color: #FFFFFF;
-	text-align:center;
+    /* Welcome to Darrel K.: */
+    font-family: Roboto-Bold;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-align: center;
 }
 
 .buttons {
-	margin: auto;
-	width: 100%;
-	padding-top: 170px;
-	position: fixed;
-	bottom: 40px;
+    margin: auto;
+    width: 100%;
+    padding-top: 170px;
+    position: fixed;
+    bottom: 40px;
 }
 
 .submit {
-	background: #3AD83A;
-	border-radius: 8px;
-	font-family: Roboto-Medium;
-	font-size: 19px;
-	color: #FFFFFF;
-	width: 79%;
-	margin: auto;
-	position: relative;
-	left: 10.3%;
+    background: #3AD83A;
+    border-radius: 8px;
+    font-family: Roboto-Medium;
+    font-size: 19px;
+    color: #FFFFFF;
+    width: 79%;
+    margin: auto;
+    position: relative;
+    left: 10.3%;
 }
 
 .dropdown {
-	width:100%;
+    width: 100%;
 }
 
 .tix-info-container {
-	width: 100%;
-	height: 100vh;
-	padding-top: 40px;
-	display: none;
-	margin: auto;
-	background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    padding-top: 40px;
+    display: none;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .section-icon {
-	width:40px;
-	height: 33px;
-	margin: auto;
-	padding-top: 20px;
+    width: 40px;
+    height: 33px;
+    margin: auto;
+    padding-top: 20px;
 }
 
 .row-icon {
-	width: 49px;
-	height: 34px;
-	margin: auto;
-	padding-top: 20px;
+    width: 49px;
+    height: 34px;
+    margin: auto;
+    padding-top: 20px;
 }
 
 .seat-icon {
-	margin:auto;
-	padding-top: 20px;
-	text-align: center;
+    margin: auto;
+    padding-top: 20px;
+    text-align: center;
 }
 
 button.btn.btn-secondary.btn-lg.dropdown-toggle {
     color: #3AD83A;
-    z-index:1;
+    z-index: 1;
 }
 
 .icon {
-	background:#4A4A4A;
-	border: 1px solid #979797;
-	height:80px;
-	float:left;
-	width:33.3%;
+    background: #4A4A4A;
+    border: 1px solid #979797;
+    height: 80px;
+    float: left;
+    width: 33.3%;
 }
 
 .icon p {
-	color:#3AD83A;
-	text-align:center;
-	/* Section: */
-	font-family: Roboto-Bold;
-	font-size: 14px;
+    color: #3AD83A;
+    text-align: center;
+    /* Section: */
+    font-family: Roboto-Bold;
+    font-size: 14px;
 }
 
 .menu-container {
-	/* Rectangle: */
-	background: #FFFFFF;
-	border: 1px solid #979797;
-	border-radius: 30px;
-	width:100%;
-	display:none;
+    /* Rectangle: */
+    background: black;
+    width: 102%;
+    opacity: 0.75;
+    display: none;
 }
 
 h1.menu-heading {
-	color: #000000;
+    color: #000000;
 }
 
 h1.vendor-name {
-	/* China Express: */
-	font-family: Signika-Semibold;
-	font-size: 29px;
-	color: #000000;
+    /* China Express: */
+    font-family: Signika-Semibold;
+    font-size: 29px;
+    color: #000000;
 }
 
 h1.menu-item {
-	/* Egg rolls: */
-	font-family: Roboto-Regular;
-	font-size: 22px;
-	color: #9B9B9B;
+    /* Egg rolls: */
+    font-family: Roboto-Regular;
+    font-size: 22px;
+    color: #9B9B9B;
 }
 
 h1.price {
-	font-size: 19px;
-	color: #000000;
+    font-size: 19px;
+    color: #000000;
 }
 
 .carousel-indicators {
-	color:#3AD83A;
+    color: #3AD83A;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 50px;
+    height: 8px;
+    margin: 1px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 2px;
 }
 
 #ticket {
-	font-size: 38px;
-	color:#3AD83A;
+    font-size: 38px;
+    color: #3AD83A;
 }
 
 .flex-container {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .checkout-modal {
-	/* Rectangle 6: */
-	background: #000000;
-	border: 3px solid #3AD83A;
-	border-radius: 30px;
-	text-align: center;
-	width: 87%;
-	margin: 30% 6.5%;
-	height: 180px;
+    /* Rectangle 6: */
+    background: #000000;
+    border: 3px solid #3AD83A;
+    border-radius: 30px;
+    text-align: center;
+    width: 87%;
+    margin: 30% 6.5%;
+    height: 180px;
 }
 
 .checkout-modal h2 {
-	/* 15: */
-	font-family: Signika-Regular;
-	font-size: 55px;
-	color: #FFFFFF;
+    /* 15: */
+    font-family: Signika-Regular;
+    font-size: 55px;
+    color: #FFFFFF;
 }
 
 .checkout-modal p {
-	/* Your order will be r: */
-	font-family: Roboto-Regular;
-	font-size: 16px;
-	color: #3AD83A;
+    /* Your order will be r: */
+    font-family: Roboto-Regular;
+    font-size: 16px;
+    color: #3AD83A;
 }
 
 #x {
-	font-size:38px;
-	color:#3AD83A;
+    font-size: 38px;
+    color: #3AD83A;
 }
 
 #bottom-text {
-	position: absolute;
+    position: absolute;
     bottom: 0px;
     left: 3%;
 }
 
 .row.bottom-text {
-	position: relative;
-	height: 80%;
-	left: 36%;
+    position: relative;
+    height: 80%;
+    left: 36%;
 }
 
 .login-container {
-	display:none;
-	margin-top: 30%;
+    display: none;
+    margin-top: 30%;
 }
 
 .checkout-modal {
-	display:none;
+    display: none;
 }
 
 .welcome-container {
-	position: relative;
-	float: none;
-	background-blend-mode: overlay;
-	/* text-align: center; */
-	background-color: black;
-	background: rgba(0, 0, 0, 0.5);
-	height:100vh;
+    position: relative;
+    float: none;
+    background-blend-mode: overlay;
+    /* text-align: center; */
+    background-color: black;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
 }
 
 .form-group {
-	width: 75%;
-	margin: auto;
-	padding: 8px 0 4%;
+    width: 75%;
+    margin: auto;
+    padding: 8px 0 4%;
 }
 
 .current-user-container {
-	/* Rectangle: */
-	background: #000000;
-	border: 0 solid #FFFFFF;
-	box-shadow: 3px 3px 1px 0 rgba(0,0,0,0.50);
-	border-radius: 8px;
-	border-color:white;
-	text-align: center;
-	color: #FFFFFF;
-	width: 60%;
-	height: 240px;
-	padding-top: 40px;
-	margin: auto;
+    /* Rectangle: */
+    background: #000000;
+    border: 0 solid #FFFFFF;
+    box-shadow: 3px 3px 1px 0 rgba(0, 0, 0, 0.50);
+    border-radius: 8px;
+    border-color: white;
+    text-align: center;
+    color: #FFFFFF;
+    width: 60%;
+    height: 240px;
+    padding-top: 40px;
+    margin: auto;
 }
 
 #signout {
-	color: #000000;
-	margin: auto;
+    color: #000000;
+    margin: auto;
 }
 
-#my-signin2 > div {
-  margin: 0 auto;
-  margin-bottom: 50px;
+#my-signin2>div {
+    margin: 0 auto;
+    margin-bottom: 50px;
 }
 
 .form-group label {
-	color:#3AD83A;
+    color: #3AD83A;
+}
+
+.img-fluid {
+    height: 300px;
+    width: 300px;
+    outline: none;
+    display: block;
+    margin: auto;
+    margin-bottom: 40px;
 }
 
 @media screen and (max-width: 640px) {
-	body {
-		background-image: url("../images/DKRsmall.jpg");
-	}
+    body {
+        background-image: url("../images/DKRsmall.jpg");
+    }
 }
