@@ -95,7 +95,7 @@ function getMenus() {
                     $(".cucinaMenu").append("<li>" + vendorData[j].item_name + " " + "$" + vendorData[j].item_price + "</li><select class='orderQty'><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select>");
                     // Chris this vendorData variable is an array that contains all of the information for this vendor.
                     $('#checkout').click(function() {
-                        var qty = $('.orderQty option:selected').val();
+                        var qty = $('.orderQty').val();
                         console.log(qty);
                         var price = vendorData.item_price;
                         var output = qty * price;
