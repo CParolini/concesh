@@ -90,9 +90,11 @@ function getMenus() {
             var vendorQuery = "/api/getitems/" + vendorInfo[i].id;
             $.get(vendorQuery, function(vendorData) {
                 for (var j = 0; j < vendorData.length; j++) {
-                    console.log(vendorData[j]);
-                    $(".torchyMenu").append("<li>" + vendorData[j].item_name + " " + "$" + vendorData[j].item_price + "</li><select class='orderQty'><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select>");
-                    $(".cucinaMenu").append("<li>" + vendorData[j].item_name + " " + "$" + vendorData[j].item_price + "</li><select class='orderQty'><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select>");
+                    if (vendorData[j].vendorId === 2) {
+                        $(".torchyMenu").append("<li>" + vendorData[j].item_name + " " + "$" + vendorData[j].item_price + "</li><select {class='orderQty'}><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select>");
+                    } else if (vendorData[j].vendorId === 1) {
+                        $(".cucinaMenu").append("<li>" + vendorData[j].item_name + " " + "$" + vendorData[j].item_price + "</li><select {class='orderQty'}><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select>");
+                    }
                     // Chris this vendorData variable is an array that contains all of the information for this vendor.
                     $('#checkout').click(function() {
                         var qty = $('.orderQty').val();
@@ -174,20 +176,6 @@ $(document).ready(function() {
         $(".cucinaMenu").show();
         $(".cucinaIcon").css("background", "white");
         $(".torchyIcon").css("background", "black");
-    });
-
-    $(".torchy").click(function() {
-        $(".torchy").hide();
-        $(".cucina").show();
-        $(".cucinaIcon").css("background", "white");
-        $(".torchyIcon").css("background", "black");
-    });
-
-    $(".cucina").click(function() {
-        $(".torchy").show();
-        $(".cucina").hide();
-        $(".torchyIcon").css("background", "white");
-        $(".cucinaIcon").css("background", "black");
     });
 
     $(".search-submit").click(function() {
