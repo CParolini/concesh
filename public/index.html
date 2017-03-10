@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="google-signin-client_id" content="911476103780-5im21hafg5fpq9vig2lna1ifbj8k7eea.apps.googleusercontent.com">
 	<title>Concesh</title>
 	<link rel=stylesheet href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel=stylesheet href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -37,108 +38,24 @@
 					</g>
 				</svg>
 		</div>
-	</div>
-	<h1 class="welcome">Welcome to Darrell K Royal-Texas Memorial Stadium!</h1>
-	<div class="buttons">
-		<button id="login">Login</button>
-		<button id="signup">Sign up</button>
-	</div>
-	</div>
-
-	<!-- =============NEW SECTION==================
-
-	================.REGISTER FORM.================
-
-	===============================================
-
-	-->
-
-	<div class="regform-container">
-		<h1>Enter your information</h1>
-		<div class="row">
-			<div class="col-xs-8">
-				<div class="form-group">
-					<label for="name">Name</label>
-					<input type="name" class="form-control" id="name" aria-describedby="name" placeholder="Name">
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-2">
-				<div class="dropdown">
-					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-					U.S.
-					<span class="caret"></span>
-				  </button>
-					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#">Separated link</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-xs-6">
-				<div class="form-group">
-					<input type="name" class="form-control" id="name" aria-describedby="name" placeholder="+1">
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-8">
-				<div class="form-group">
-					<input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Email">
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-xs-8">
-				<button class="submit submitCredentials">Submit</button>
-			</div>
-		</div>
-
-		<hr />
-
-		<div class="row">
-			<div class="g-signin2" data-onsuccess="onSignIn">
-				<iframe src="https://developers.google.com/identity/sign-in/web/demos/signin_contextual_simple.jshtml?hl=en" style="width: 200px;
-				height: 60px;"></iframe>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false">Log in with Facebook</div>
+		<div class="buttons">
+			<button id="start">Get Started!</button>
 		</div>
 	</div>
 
 	<!-- ============THIS IS THE LOGIN SECTION=============== -->
 
 	<div class="login-container">
-		<h1>Sign in to your account</h1>
-		<div class="row">
-			<div class="form-group">
-				<input type="name" class="form-control" id="name" aria-describedby="name" placeholder="Name">
+		<div id="my-signin2"></div>
+		<div class="current-user-container">
+			You are currently logged in as:
+			<div id="currentUser">
 			</div>
+			<button id="signout" onclick="signOut();">Not You? Signout Here</button>
 		</div>
-		<div class="row">
-			<div class="form-group">
-				<input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Email">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-8">
-				<button class="submit submitCredentials" id="login2">Login</button>
-			</div>
-		</div>
-
 		<hr />
-
-		<div class="g-signin2" data-onsuccess="onSignIn">
-			<iframe class="g-signin2" src="https://developers.google.com/identity/sign-in/web/demos/signin_contextual_simple.jshtml?hl=en" style="width: 75%;
-			height: 60px;"></iframe>
-				<hr />
+		<div class="row">
+			<button class="submit" id="submitCredentials">Continue</button>
 		</div>
 	</div>
 
@@ -292,7 +209,7 @@
 
 		<div class="row">
 			<div class="col-xs-8">
-				<button class="submit" id="checkout">Checkout
+				<button class="submit" id="checkout">Go to Checkout
 					<svg width="57px" height="31px" viewBox="191 483 57 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						<!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
 						<desc>Created with Sketch.</desc>
@@ -313,6 +230,18 @@
 	<!-- THIS IS THE CHECKOUT MODAL -->
 
 	<div class=checkout-modal id="checkout-modal">
+	<form action="/charge" method="POST">
+      <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_0IoQ5T45UO7CxJnvKMmJ0l0n"
+    data-amount= "999"
+    data-name="Order"
+    data-description="[append item names here]"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-label="Pay Here"
+    data-locale="auto">
+      </script>
+    </form>
 		<div class="row">
 			<p>Your order will be ready in:</p>
 			<i class="icon-remove-sign" id="x"></i>
@@ -321,7 +250,12 @@
 			<h2 class="modal"><span id="time-rem"></span>???</h2>
 		</div>
 		<div class="row">
-			<p id="bottom-text">Enjoy the show!</p>
+			<p>Enjoy the show!</p>
+		</div>
+		<div class="row">
+			<p>Receipt sent to:</p>
+			<div id="emailReceipt">
+			</div>
 		</div>
 	</div>
 
@@ -331,7 +265,7 @@
 	<script>
 		$('.carousel').carousel( /*{array.length}*/ );
 	</script>
-	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 	<script src="https://use.fontawesome.com/26e56c5853.js"></script>
 	<script src="js/ui.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfX53k8sSPq5gCp4E5qxumPQk3mlGk53w&libraries=places&callback=initAutocomplete" async defer></script>

@@ -14,7 +14,7 @@ div.logo {
 	text-align: center;
 }
 
-button#login {
+button#start {
 	background: #5E71F9;
 	border-radius: 8px;
 	border: solid 2px;
@@ -26,19 +26,6 @@ button#login {
 	left: -60%;
 	margin: auto;
 	float: right;
-}
-
-button#signup {
-	border: 2px solid #3AD83A;
-	border-radius: 8px;
-	font-family: Roboto-Medium;
-	font-size: 20px;
-	color: #FFFFFF;
-	background-color: transparent;
-	position: relative;
-	left: 60%;
-	max-width: 240px;
-	margin: auto;
 }
 
 button {
@@ -224,12 +211,9 @@ h1.price {
 	left: 36%;
 }
 
-.regform-container {
-	display:none;
-}
-
 .login-container {
 	display:none;
+	margin-top: 30%;
 }
 
 .checkout-modal {
@@ -252,19 +236,29 @@ h1.price {
 	padding: 8px 0 4%;
 }
 
-iframe.g-signin2 {
-	width: 75%;
-	height: 60px;
-	border: none;
+.current-user-container {
+	/* Rectangle: */
+	background: #000000;
+	border: 0 solid #FFFFFF;
+	box-shadow: 3px 3px 1px 0 rgba(0,0,0,0.50);
+	border-radius: 8px;
+	border-color:white;
+	text-align: center;
+	color: #FFFFFF;
+	width: 60%;
+	height: 240px;
+	padding-top: 40px;
 	margin: auto;
-	position: relative;
-	left: 25%;
-	right: 25%;
 }
 
-div.g-signin2 {
+#signout {
+	color: #000000;
 	margin: auto;
-	width: 75%;
+}
+
+#my-signin2 > div {
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .form-group label {
