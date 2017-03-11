@@ -111,6 +111,17 @@ function getMenus() {
                         $(".quantity").append("<input type='text' class='cucinaQty'>");
                     }
                 }
+                $(".torchy").show();
+                $(".cucina").hide();
+                $(".torchyTable").show();
+                $(".cucinaTable").hide();
+                $(".torchyIcon").css("background", "white");
+                $(".torchyItem").show();
+                $(".cucinaItem").hide();
+                $(".torchyPrice").show();
+                $(".cucinaPrice").hide();
+                $(".torchyQty").show();
+                $(".cucinaQty").hide();
             });
         }
     });
@@ -162,24 +173,13 @@ $(document).ready(function() {
 
     // Submit seat info and shows menus
     $("#tix-submit").click(function() {
+        // Fill in vendor and menu item information
+        getMenus();
+
         $(".tix-info-container").hide();
         $(".menu-container").show();
         $(".menu-container").show();
-        $(".torchy").show();
-        $(".cucina").hide();
-        $(".torchyTable").show();
-        $(".cucinaTable").hide();
-        $(".torchyIcon").css("background", "white");
         $("#checkout").show();
-        $(".torchyItem").show();
-        $(".cucinaItem").hide();
-        $(".torchyPrice").show();
-        $(".cucinaPrice").hide();
-        $(".torchyQty").show();
-        $(".cucinaQty").hide();
-
-        // Fill in vendor and menu item information
-        getMenus();
     });
 
     // Checkout and send payment
@@ -210,7 +210,6 @@ $(document).ready(function() {
     });
 
     $(".cucinaIcon").click(function() {
-        $(".cucinaTable").prepend(".cucina");
         $(".torchy").hide();
         $(".cucina").show();
         $(".torchyQty").hide();
