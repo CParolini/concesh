@@ -1,3 +1,6 @@
+// Order Variables
+var totalAmount = 250;
+
 // Venue Variables
 var selectedVenue = 1;
 var sections;
@@ -66,18 +69,28 @@ function checkIfLoggedIn() {
 
 // Database to HTML interaction functions
 function getVenueInfo() {
-    var query = "/api/getvenueinfo/" + selectedVenue;
-    $.get(query, function(data) {
-        sections = data[0].sections;
-        rows = data[0].sections;
-        seats = data[0].seats;
-        var optionItem = $("<option>");
-        // optionItem.addClass("optionItem");
-        for (var i = 1; i <= sections; i++) {
-            optionItem.text(i);
-            $("select.form-control").append(optionItem);
-        }
-    });
+	var query = "/api/getvenueinfo/" + selectedVenue;
+	$.get(query, function(data) {
+		sections = data[0].sections;
+		rows = data[0].rows;
+		seats = data[0].seats;
+
+		for (var i = 1; i <= sections; i++) {
+			var optionItem = $("<option>");
+			optionItem.text(i);
+			$("select.sectionDiv").append(optionItem);
+		};
+		for (var i = 1; i <= rows; i++) {
+			var optionItem = $("<option>");
+			optionItem.text(i);
+			$("select.rowDiv").append(optionItem);
+		};
+		for (var i = 1; i <= seats; i++) {
+			var optionItem = $("<option>");
+			optionItem.text(i);
+			$("select.seatDiv").append(optionItem);
+		};
+	});
 }
 
 function getMenus() {
@@ -202,7 +215,6 @@ var componentForm = {
     country: "long_name",
     postal_code: "short_name"
 };
-// console.log(autocomplete);
 
 function initAutocomplete() {
     // Create the autocomplete object, restricting the search to geographical
@@ -243,3 +255,45 @@ function geolocate() {
         });
     }
 }
+
+$(document).ready(function(){
+	$(".search-container").hide();
+
+	// Initial start button click
+	$("#start").click(function() {
+		$(".welcome-container").hide();
+		$(".buttons").hide();
+		$(".login-container").show();
+		$("#submitCredentials").hide();
+
+		// Check if user is already signed into Google
+		checkIfLoggedIn()
+	});
+
+	// Submits credentials after login or registration and sends user to seat selection
+	$("#submitCredentials").click(function() {
+		$(".login-container").hide();
+		$(".search-container").show();
+	});
+
+	$(".search-submit").click(function(){
+		$(".search-container").hide();
+		$(".tix-info-container").show();
+		getVenueInfo();
+	});
+
+	// Submit seat info and shows menus
+	$("#tix-submit").click(function() {
+		$(".tix-info-container").hide();
+		$(".menu-container").show();
+
+		// Fill in vendor and menu item information
+		getMenus();
+	});
+
+	// Checkout and send payment
+	$("#checkout").click(function() {
+		$(".menu-container").hide();
+		$("#checkout-modal").show();
+	});
+});

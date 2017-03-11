@@ -1,6 +1,10 @@
 // Requiring our models
 var db = require("../models");
 
+// *now* load our custom Stripe charing module
+// which we'll use in the router later on
+const charge = require('../charge');
+
 // Routes
 module.exports = function(app) {
 
@@ -43,4 +47,14 @@ module.exports = function(app) {
             res.json(dbMenuItem);
         });
     });
+
+	// POST /charge
+	app.post('/charge', (req, res, next) => {
+		charge(req).then(data => {
+			console.log("works");
+			res.redirect("/complete")
+		}).catch(error => {
+			console.log("no work");
+		});
+	});
 };

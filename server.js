@@ -11,10 +11,6 @@ dotenv.config({
   path: `${__dirname}/${envfile}`,
 });
 
-// *now* load our custom Stripe charing module
-// which we'll use in the router later on
-const charge = require('./charge');
-
 // create the server, and all the routes and configuration
 // go against this `app`
 const app = express();
@@ -37,17 +33,6 @@ app.use(express.static("./public"));
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
-// expose `process` to the view templates
-app.locals.process = process;
-
-// POST /charge
-app.post('/charge', (req, res, next) => {
-  charge(req).then(data => {
-    res.render('./public/thanks');
-  }).catch(error => {
-    res.render('error', error);
-  });
-});
 
 // Syncing our sequelize models and then starting our express app
 db.sequelize.sync().then(function() {
