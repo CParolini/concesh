@@ -66,28 +66,28 @@ function checkIfLoggedIn() {
 
 // Database to HTML interaction functions
 function getVenueInfo() {
-	var query = "/api/getvenueinfo/" + selectedVenue;
-	$.get(query, function(data) {
-		sections = data[0].sections;
-		rows = data[0].rows;
-		seats = data[0].seats;
+    var query = "/api/getvenueinfo/" + selectedVenue;
+    $.get(query, function(data) {
+        sections = data[0].sections;
+        rows = data[0].rows;
+        seats = data[0].seats;
 
-		for (var i = 1; i <= sections; i++) {
-			var optionItem = $("<option>");
-			optionItem.text(i);
-			$("select.sectionDiv").append(optionItem);
-		};
-		for (var i = 1; i <= rows; i++) {
-			var optionItem = $("<option>");
-			optionItem.text(i);
-			$("select.rowDiv").append(optionItem);
-		};
-		for (var i = 1; i <= seats; i++) {
-			var optionItem = $("<option>");
-			optionItem.text(i);
-			$("select.seatDiv").append(optionItem);
-		};
-	});
+        for (var i = 1; i <= sections; i++) {
+            var optionItem = $("<option>");
+            optionItem.text(i);
+            $("select.sectionDiv").append(optionItem);
+        }
+        for (var i = 1; i <= rows; i++) {
+            var optionItem = $("<option>");
+            optionItem.text(i);
+            $("select.rowDiv").append(optionItem);
+        }
+        for (var i = 1; i <= seats; i++) {
+            var optionItem = $("<option>");
+            optionItem.text(i);
+            $("select.seatDiv").append(optionItem);
+        }
+    });
 }
 
 function getMenus() {
@@ -154,10 +154,10 @@ $(document).ready(function() {
         getVenueInfo();
     });
 
-    $(".submit").click(function(){
-      $(".cucinaItem").hide();
-      $(".cucinaPrice").hide();
-      $(".cucinaQty").hide();
+    $(".submit").click(function() {
+        $(".cucinaItem").hide();
+        $(".cucinaPrice").hide();
+        $(".cucinaQty").hide();
     });
 
     // Submit seat info and shows menus
@@ -187,6 +187,11 @@ $(document).ready(function() {
         $(".menu-container").hide();
         $("#checkout-modal").show();
         $("#checkout").hide();
+        $(".stripe-button-el").hide();
+        $(".stripe-button-el").trigger("click");
+        $(".tix-info-container").hide();
+        $(".menu-container").hide();
+        $("#checkout-modal").show();
     });
 
     $(".torchyIcon").click(function() {
@@ -223,7 +228,6 @@ $(document).ready(function() {
     $(".search-submit").click(function() {
         $('body').css("background-image", "url(../images/DKRsmall.jpg)");
     });
-
 });
 
 // Google autocomplete search that pulls information for the location that is chosen by the user. We will use the longitude and lattitude to locate the venue.

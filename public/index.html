@@ -9,6 +9,9 @@
 	<link rel=stylesheet href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700|Signika:600,700" rel="stylesheet">
 	<link rel=stylesheet href="css/style.css">
+	<script src="https://js.stripe.com/v2/"></script>
+	<script src="https://js.stripe.com/v3/"></script>
+	<script src="./stripeform.js"></script>
 </head>
 
 <body>
@@ -137,9 +140,9 @@
 
 			</div>
 			<div class="form-group" id="rowMenuDiv">
-			    <label for="rowMenu">Row</label>
-			    <select class="form-control rowDiv">
-			      
+				<label for="rowMenu">Row</label>
+				<select class="form-control rowDiv">
+
 			    </select>
 			</div>
 
@@ -147,9 +150,9 @@
 				<i class="fa fa-ticket" aria-hidden="true" id="ticket"></i>
 			</div>
 			<div class="form-group" id="seatMenuDiv">
-			    <label for="seatMenu">Seat</label>
-			    <select class="form-control seatDiv">
-			      
+				<label for="seatMenu">Seat</label>
+				<select class="form-control seatDiv">
+
 			    </select>
 			</div>
 		</div>
@@ -207,6 +210,12 @@
 	<!-- THIS IS THE CHECKOUT MODAL -->
 
 	<div class=checkout-modal id="checkout-modal">
+		<div id="stripeCharge">
+			<form id="sForm" action="/charge" method="POST">
+				<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_0IoQ5T45UO7CxJnvKMmJ0l0n" data-panel-label="Order up!" data-bitcoin="false" data-name="Concesh" data-description="Checkout" data-image="./images/logo.png" data-locale="auto">
+				</script>
+			</form>
+		</div>
 		<form action="/charge" method="POST">
 			<script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_0IoQ5T45UO7CxJnvKMmJ0l0n" data-amount="999" data-name="Order" data-description="[append item names here]" data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
 							data-label="Pay Here" data-locale="auto">
@@ -234,9 +243,9 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 	<script src="https://use.fontawesome.com/26e56c5853.js"></script>
- 	<script>
- 		$('.carousel').carousel( /*{array.length}*/ );
- 	</script>
+	<script>
+		$('.carousel').carousel( /*{array.length}*/ );
+	</script>
 	<script src="js/ui.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfX53k8sSPq5gCp4E5qxumPQk3mlGk53w&libraries=places&callback=initAutocomplete" async defer></script>
 </body>

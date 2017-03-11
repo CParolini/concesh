@@ -1,5 +1,5 @@
-
 const stripe = require('stripe')("sk_test_2hPmvRZOtb9jtLhbazI9YiEr");
+var cartTotal = require("./cart.js");
 
 module.exports = (req) => {
 
@@ -7,9 +7,9 @@ module.exports = (req) => {
 
   return stripe.charges.create({
     // ensures we send a number, and not a string
-    amount: 1000,
+    amount: cartTotal.cart(),
     currency: "usd",
     source: token,
-    description: 'food', 
+    description: 'food',
   });
-}
+};
