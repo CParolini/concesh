@@ -283,17 +283,17 @@ h1.price {
     margin-bottom: 40px;
 }
 
-.cucinaMenu {
+.cucinaTable {
     margin: 0px 0px 140px 0px;
     color: white;
 }
 
-.torchyMenu {
+.torchyTable {
     margin: 0px 0px 110px 0px;
     color: white;
 }
 
-.orderQty {
+.orderQty0 {
     color: black;
     opacity: 0.75;
     float: right;
@@ -301,6 +301,47 @@ h1.price {
     right: 20px;
     margin-top: -20px;
     height: 18px;
+}
+.orderQty1 {
+    color: black;
+    opacity: 0.75;
+    float: right;
+    position: absolute;
+    right: 20px;
+    margin-top: -20px;
+    height: 18px;
+}
+.orderQty2 {
+    color: black;
+    opacity: 0.75;
+    float: right;
+    position: absolute;
+    right: 20px;
+    margin-top: -20px;
+    height: 18px;
+}
+.orderQty3 {
+    color: black;
+    opacity: 0.75;
+    float: right;
+    position: absolute;
+    right: 20px;
+    margin-top: -20px;
+    height: 18px;
+}
+.orderQty4 {
+    color: black;
+    opacity: 0.75;
+    float: right;
+    position: absolute;
+    right: 20px;
+    margin-top: -20px;
+    height: 18px;
+}
+
+input {
+	width: 30px;
+	color: black;
 }
 
 @media screen and (max-width: 640px) {

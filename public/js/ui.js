@@ -91,17 +91,22 @@ function getMenus() {
             $.get(vendorQuery, function(vendorData) {
                 for (var j = 0; j < vendorData.length; j++) {
                     if (vendorData[j].vendorId === 2) {
-                        $(".torchyMenu").append("<li>" + vendorData[j].item_name + " " + "$" + vendorData[j].item_price + "</li><select {class='orderQty'}><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select>");
+                        $(".item").append("<div class='torchyItem'>" + vendorData[j].item_name + "</div>");
+                        $(".price").append("<div class='torchyPrice" + j + "'>" + vendorData[j].item_price + "</div>");
+                        $(".quantity").append("<input type='text' class='input" + j + "'>");
                     } else if (vendorData[j].vendorId === 1) {
-                        $(".cucinaMenu").append("<li>" + vendorData[j].item_name + " " + "$" + vendorData[j].item_price + "</li><select {class='orderQty'}><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select>");
+                        $(".item").append("<div class='cucinaItem'>" + vendorData[j].item_name + " </div>");
+                        $(".price").append("<div class='cucinaPrice" + j + "'>" + vendorData[j].item_price + " </div>");
+                        $(".quantity").append("<input type='text' class='input" + j + "'>");
                     }
-                    // Chris this vendorData variable is an array that contains all of the information for this vendor.
+                    // function taking prices and quantity info to multiply and add to cart
                     $('#checkout').click(function() {
-                        var qty = $('.orderQty').val();
-                        console.log(qty);
-                        var price = vendorData.item_price;
-                        var output = qty * price;
-                        // $('#output').text(output.toFixed(2));
+                        var price = $('.torchyPrice3').val();
+                        var quantity = $('.input3').val();
+                        var tot = price * quantity;
+                        console.log(price);
+                        console.log(quantity);
+                        console.log(tot);
                     });
                 }
             });
@@ -144,8 +149,8 @@ $(document).ready(function() {
         $(".menu-container").show();
         $(".torchy").show();
         $(".cucina").hide();
-        $(".torchyMenu").show();
-        $(".cucinaMenu").hide();
+        $(".torchyTable").show();
+        $(".cucinaTable").hide();
         $(".torchyIcon").css("background", "white");
         $("#checkout").show();
 
@@ -163,17 +168,18 @@ $(document).ready(function() {
     $(".torchyIcon").click(function() {
         $(".torchy").show();
         $(".cucina").hide();
-        $(".torchyMenu").show();
-        $(".cucinaMenu").hide();
+        $(".torchyTable").show();
+        $(".cucinaTable").hide();
         $(".torchyIcon").css("background", "white");
         $(".cucinaIcon").css("background", "black");
     });
 
     $(".cucinaIcon").click(function() {
+        $(".cucinaTable").prepend(".cucina");
         $(".torchy").hide();
         $(".cucina").show();
-        $(".torchyMenu").hide();
-        $(".cucinaMenu").show();
+        $(".torchyTable").hide();
+        $(".cucinaTable").show();
         $(".cucinaIcon").css("background", "white");
         $(".torchyIcon").css("background", "black");
     });
