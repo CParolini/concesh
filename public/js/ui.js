@@ -93,12 +93,12 @@ function getMenus() {
                 for (var j = 0; j < vendorData.length; j++) {
                     if (vendorData[j].vendorId === 2) {
                         $(".item").append("<div class='torchyItem'>" + vendorData[j].item_name + "</div>");
-                        $(".price").append("<div class='torchyPrice" + j + "'>" + vendorData[j].item_price + "</div>");
-                        $(".quantity").append("<input type='text' class='input" + j + "'>");
+                        $(".price").append("<div class='torchyPrice'>" + vendorData[j].item_price + "</div>");
+                        $(".quantity").append("<input type='text' class='torchyQty'>");
                     } else if (vendorData[j].vendorId === 1) {
                         $(".item").append("<div class='cucinaItem'>" + vendorData[j].item_name + " </div>");
-                        $(".price").append("<div class='cucinaPrice" + j + "'>" + vendorData[j].item_price + " </div>");
-                        $(".quantity").append("<input type='text' class='input" + j + "'>");
+                        $(".price").append("<div class='cucinaPrice'>" + vendorData[j].item_price + " </div>");
+                        $(".quantity").append("<input type='text' class='cucinaQty'>");
                     }
                 }
             });
@@ -144,6 +144,12 @@ $(document).ready(function() {
         getVenueInfo();
     });
 
+    $(".submit").click(function(){
+      $(".cucinaItem").hide();
+      $(".cucinaPrice").hide();
+      $(".cucinaQty").hide();
+    });
+
     // Submit seat info and shows menus
     $("#tix-submit").click(function() {
         $(".tix-info-container").hide();
@@ -155,6 +161,12 @@ $(document).ready(function() {
         $(".cucinaTable").hide();
         $(".torchyIcon").css("background", "white");
         $("#checkout").show();
+        $(".torchyItem").show();
+        $(".cucinaItem").hide();
+        $(".torchyPrice").show();
+        $(".cucinaPrice").hide();
+        $(".torchyQty").show();
+        $(".cucinaQty").hide();
 
         // Fill in vendor and menu item information
         getMenus();
@@ -170,6 +182,12 @@ $(document).ready(function() {
     $(".torchyIcon").click(function() {
         $(".torchy").show();
         $(".cucina").hide();
+        $(".torchyQty").show();
+        $(".cucinaQty").hide();
+        $(".torchyItem").show();
+        $(".cucinaItem").hide();
+        $(".torchyPrice").show();
+        $(".cucinaPrice").hide();
         $(".torchyTable").show();
         $(".cucinaTable").hide();
         $(".torchyIcon").css("background", "white");
@@ -180,6 +198,12 @@ $(document).ready(function() {
         $(".cucinaTable").prepend(".cucina");
         $(".torchy").hide();
         $(".cucina").show();
+        $(".torchyQty").hide();
+        $(".cucinaQty").show();
+        $(".torchyPrice").hide();
+        $(".cucinaPrice").show();
+        $(".cucinaItem").show();
+        $(".torchyItem").hide();
         $(".torchyTable").hide();
         $(".cucinaTable").show();
         $(".cucinaIcon").css("background", "white");
