@@ -1,0 +1,40 @@
+body {
+    background-image: url("../images/DKRsmall.jpg");
+    background-color: #222222;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Signika', sans-serif;
+}
+
+.checkout-modal {
+    /* Rectangle 6: */
+    background: #000000;
+    border: 3px solid #3AD83A;
+    border-radius: 30px;
+    text-align: center;
+    width: 87%;
+    margin: 30% 6.5%;
+    height: 180px;
+}
+
+.checkout-modal h2 {
+    /* 15: */
+    font-family: Signika-Regular;
+    font-size: 55px;
+    color: #FFFFFF;
+}
+
+.checkout-modal p {
+    /* Your order will be r: */
+    font-family: Roboto-Regular;
+    font-size: 16px;
+    color: #3AD83A;
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        background-image: url("../images/DKRsmall.jpg");
+    }
+}

@@ -1,6 +1,3 @@
-// Order Variables
-var totalAmount = 250;
-
 // Venue Variables
 var selectedVenue = 1;
 var sections;
