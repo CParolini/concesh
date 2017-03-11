@@ -1,3 +1,6 @@
+// Order Variables
+var totalAmount = 250;
+
 // Venue Variables
 var selectedVenue = 1;
 var sections;
@@ -156,7 +159,6 @@ function geolocate() {
 }
 
 $(document).ready(function(){
-
 	$(".search-container").hide();
 
 	// Initial start button click

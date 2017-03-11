@@ -265,8 +265,29 @@ h1.price {
 	color:#3AD83A;
 }
 
-.orderReady {
-	display: none;
+.complete-modal {
+	/* Rectangle 6: */
+	background: #000000;
+	border: 3px solid #3AD83A;
+	border-radius: 30px;
+	text-align: center;
+	width: 87%;
+	margin: 30% 6.5%;
+	height: 180px;
+}
+
+.complete-modal h2 {
+	/* 15: */
+	font-family: Signika-Regular;
+	font-size: 55px;
+	color: #FFFFFF;
+}
+
+.complete-modal p {
+	/* Your order will be r: */
+	font-family: Roboto-Regular;
+	font-size: 16px;
+	color: #3AD83A;
 }
 
 @media screen and (max-width: 640px) {
