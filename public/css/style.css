@@ -396,11 +396,13 @@ div#currentUser {
 }*/
 
 th.quantity input {
-    width: 30px;
+    width: 25px;
     color: black;
-    margin: -5.5px 82px;
+    margin: -4.5px 80px 0px 83px;
     display: block;
-    height: 26px;
+    height: 24px;
+    position: relative;
+    top: 5px;
 }
 
 .quantity {
