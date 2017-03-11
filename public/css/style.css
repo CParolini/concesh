@@ -24,9 +24,18 @@ button#start {
 	font-size: 20px;
 	color: #FFFFFF;
 	width: 100%;
-	position: relative;
-	left: auto;
-	right: auto;
+	position: absolute;
+	max-width: 310px;
+	margin: 0 auto;
+	bottom: 20px;
+	right: 0;
+	left: 0;
+}
+
+div#my-signin2 {
+    margin: auto;
+    position: relative;
+    top: 20px;
 }
 
 .welcome {
@@ -68,17 +77,24 @@ h1 {
 }
 
 button.search-submit {
-    width: 75%;
-    margin: 12%;
-    background: #3AD83A;
-    border-radius: 8px;
-    font-family: Roboto-Medium;
-    font-size: 19px;
-    color: #FFFFFF;
+	width: 75%;
+	margin: auto;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+	position: absolute;
+	background: #3AD83A;
+	border-radius: 8px;
+	font-family: Roboto-Medium;
+	font-size: 19px;
+	color: #FFFFFF;
+	max-width: 310px;
 }
 
 .searchbar {
 	padding-top: 30vh;
+	max-width: 650px;
+	margin: auto;
 }
 
 .submit {
@@ -89,8 +105,11 @@ button.search-submit {
 	color: #FFFFFF;
 	width: 79%;
 	margin: auto;
-	position: relative;
-	left: 10.3%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+	max-width: 310px;
 }
 
 .dropdown {
@@ -192,7 +211,6 @@ h1.price {
 
 #tix-submit {
 	position: absolute;
-	left: 10.3%;
 	bottom: 20px;
 }
 
@@ -206,6 +224,8 @@ h1.top {
 .dropdown-wrapper {
     position: relative;
     top: 12vh;
+    max-width: 760px;
+    margin: auto;
 }
 
 .flex-container {
@@ -257,7 +277,6 @@ h1.top {
 
 .login-container {
 	display:none;
-	margin-top: 30%;
 }
 
 .checkout-modal {
@@ -292,12 +311,22 @@ h1.top {
 	width: 60%;
 	height: 240px;
 	padding-top: 40px;
-	margin: auto;
+	margin: 25vh auto;
+	font-family: Roboto-Medium, sans-serif;
+	max-width: 450px;
+}
+
+img#theImg {
+    margin: 10px auto;
+}
+
+div#currentUser {
+    margin-top: 2px;
 }
 
 #signout {
 	color: #000000;
-	margin: auto;
+ 	margin: 4px auto;
 }
 
 #my-signin2 > div {
