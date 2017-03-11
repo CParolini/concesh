@@ -210,7 +210,6 @@ $(document).ready(function() {
     });
 
     $(".cucinaIcon").click(function() {
-        $(".cucinaTable").prepend(".cucina");
         $(".torchy").hide();
         $(".cucina").show();
         $(".torchyQty").hide();
