@@ -51,8 +51,8 @@ module.exports = function(app) {
 	// POST /charge
 	app.post('/charge', (req, res, next) => {
 		charge(req).then(data => {
-			console.log("works");
-			res.redirect("/complete")
+			console.log("works");   
+			//res.redirect("/complete")
 		}).catch(error => {
 			console.log("no work");
 		});
