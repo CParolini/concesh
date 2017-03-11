@@ -1,5 +1,5 @@
 body {
-    background-image: url("../images/Darrell_K_Royal-Texas_Memorial_Stadium_at_Night.jpg");
+    background-image: url("../images/resize-iphone.jpg");
     background-color: #222222;
     /* resize-iphone: */
     background-repeat: no-repeat;
@@ -167,11 +167,10 @@ button.btn.btn-secondary.btn-lg.dropdown-toggle {
 
 .menu-container {
     /* Rectangle: */
-    background: #FFFFFF;
-    border: 1px solid #979797;
-    border-radius: 30px;
-    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    width: 102%;
     display: none;
+		color: white;
 }
 
 h1.menu-heading {
@@ -371,6 +370,27 @@ div#currentUser {
 
 .form-group label {
     color: #3AD83A;
+}
+
+#checkout {
+    background: #3AD83A;
+    border-radius: 8px;
+    font-family: Roboto-Medium;
+    font-size: 19px;
+    color: #FFFFFF;
+    width: 79%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    max-width: 310px;
+		display: none;
+}
+
+input {
+	width: 30px;
+	color: black;
 }
 
 @media screen and (max-width: 640px) {
