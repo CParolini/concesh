@@ -1,3 +1,9 @@
+// Cart Variables
+var price 
+var quantity;
+var tot;
+
+
 // Venue Variables
 var selectedVenue = 1;
 var sections;
@@ -117,14 +123,14 @@ function getMenus() {
 }
 
 // function taking prices and quantity info to multiply and add to cart
-$('#checkout').click(function() {
+function getTotal() {
     var price = $('.torchyPrice3').val();
     console.log(price);
     var quantity = $('.input3').val();
     console.log(quantity);
     var tot = price * quantity;
     console.log(tot);
-});
+}
 
 $(document).ready(function() {
 
@@ -151,6 +157,7 @@ $(document).ready(function() {
     $(".search-submit").click(function() {
         $(".search-container").hide();
         $(".tix-info-container").show();
+        $('body').css("background-image", "url(../images/DKRsmall.jpg)");
         getVenueInfo();
     });
 
@@ -175,6 +182,8 @@ $(document).ready(function() {
         $(".menu-container").hide();
         $("#checkout-modal").show();
         $("#checkout").hide();
+
+        getTotal();
     });
 
     $(".torchyIcon").click(function() {
@@ -194,10 +203,6 @@ $(document).ready(function() {
         $(".cucinaTable").show();
         $(".cucinaIcon").css("background", "white");
         $(".torchyIcon").css("background", "black");
-    });
-
-    $(".search-submit").click(function() {
-        $('body').css("background-image", "url(../images/DKRsmall.jpg)");
     });
 
 });
