@@ -8,29 +8,27 @@
 	<link rel=stylesheet href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel=stylesheet href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700|Signika:600,700" rel="stylesheet">
-	<link rel=stylesheet href="css/style.css">
+	<link rel=stylesheet href="css/checkoutstyle.css">
 </head>
 
 <body>
 
 	<!-- THIS IS THE CHECKOUT MODAL -->
 
-	<div class="complete-modal">
-		<div class="orderConfirmed">
-			<div class="row">
-				<p>Your order will be ready in:</p>
-				<i class="icon-remove-sign" id="x"></i>
-			</div>
-			<div class="row">
-				<h2 class="modal"><span id="time-rem"></span>???</h2>
-			</div>
-			<div class="row">
-				<p>Enjoy the show!</p>
-			</div>
-			<div class="row">
-				<p>Receipt sent to:</p>
-				<div id="emailReceipt">
-				</div>
+	<div class=checkout-modal id="checkout-modal">
+		<div class="row">
+			<p>Your order total is $9.99</p>
+		</div>
+		<div class="row">
+			<p>Your order will be ready in: 10 Minutes</p>
+			<i class="icon-remove-sign" id="x"></i>
+		</div>
+		<div class="row">
+			<h2 class="modal"><span id="time-rem"></span>???</h2>
+		</div>
+		<div class="row">
+			<p>Receipt sent to:</p>
+			<div id="emailReceipt">
 			</div>
 		</div>
 	</div>

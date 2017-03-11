@@ -1,6 +1,3 @@
-// Order Variables
-var totalAmount = 250;
-
 // Venue Variables
 var selectedVenue = 1;
 var sections;
@@ -255,45 +252,3 @@ function geolocate() {
         });
     }
 }
-
-$(document).ready(function(){
-	$(".search-container").hide();
-
-	// Initial start button click
-	$("#start").click(function() {
-		$(".welcome-container").hide();
-		$(".buttons").hide();
-		$(".login-container").show();
-		$("#submitCredentials").hide();
-
-		// Check if user is already signed into Google
-		checkIfLoggedIn()
-	});
-
-	// Submits credentials after login or registration and sends user to seat selection
-	$("#submitCredentials").click(function() {
-		$(".login-container").hide();
-		$(".search-container").show();
-	});
-
-	$(".search-submit").click(function(){
-		$(".search-container").hide();
-		$(".tix-info-container").show();
-		getVenueInfo();
-	});
-
-	// Submit seat info and shows menus
-	$("#tix-submit").click(function() {
-		$(".tix-info-container").hide();
-		$(".menu-container").show();
-
-		// Fill in vendor and menu item information
-		getMenus();
-	});
-
-	// Checkout and send payment
-	$("#checkout").click(function() {
-		$(".menu-container").hide();
-		$("#checkout-modal").show();
-	});
-});
