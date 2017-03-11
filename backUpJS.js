@@ -44,21 +44,23 @@ function signOut() {
 }
 
 function checkIfLoggedIn() {
-	if (profile) {
-		console.log("Signed in");
-		$("#submitCredentials").show();
-		$("#signout").show();
-		$(".current-user-container").show();
-		$("#currentUser").html(profile.ig + " " + profile.wea + "<br/>");
-		$("#currentUser").append($("<img>",{id:"theImg",src: profile.Paa}));
-		$("#emailReceipt").html("<p>" + profile.U3 + "</p>");
-	} else {
-		console.log("Not signed in");
-		$("#my-signin2").show();
-		$("#signout").hide();
-		$("#submitCredentials").hide();
-		$(".current-user-container").hide();
-	}
+    if (profile) {
+        console.log("Signed in");
+        $("#submitCredentials").show();
+        $("#signout").show();
+        $(".current-user-container").show();
+        $("#currentUser").html(profile.ig + " " + profile.wea + "<br/>");
+        $("#currentUser").append($("<img>", {
+            id: "theImg",
+            src: profile.Paa
+        }));
+        $("#emailReceipt").html("<p>" + profile.U3 + "</p>");
+    } else {
+        console.log("Not signed in");
+        $("#signout").hide();
+        $("#submitCredentials").hide();
+        $(".current-user-container").hide();
+    }
 }
 
 // Database to HTML interaction functions

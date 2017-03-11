@@ -1,5 +1,5 @@
 body {
-    background-image: url("../images/Darrell_K_Royal-Texas_Memorial_Stadium_at_Night.jpg");
+    background-image: url("../images/resize-iphone.jpg");
     background-color: #222222;
     /* resize-iphone: */
     background-repeat: no-repeat;
@@ -12,30 +12,25 @@ body {
 div.logo {
     margin: 0 auto;
     text-align: center;
-    background-color: black;
-    background: linear-gradient(black, transparent);
 }
 
 button#start {
-    background: transparent;
+    background: #5E71F9;
     border-radius: 8px;
-    border: solid 2px #3AD83A;
+    border: solid 2px;
     font-family: Roboto-Medium;
     font-size: 20px;
     color: #FFFFFF;
-    width: 100%;
-    position: absolute;
-    max-width: 310px;
-    margin: 0 auto;
-    bottom: 20px;
-    right: 0;
-    left: 0;
+    position: relative;
+    max-width: 240px;
+    left: -60%;
+    margin: auto;
+    float: right;
 }
 
-div#my-signin2 {
-    margin: auto;
-    position: relative;
-    top: 20px;
+button {
+    height: 40px;
+    width: 100px;
 }
 
 .welcome {
@@ -44,7 +39,6 @@ div#my-signin2 {
     margin: auto;
     /* float: none; */
     max-width: 70%;
-    font-size: 28px;
 }
 
 h1 {
@@ -55,46 +49,12 @@ h1 {
     text-align: center;
 }
 
-.search-icon {
-    text-align: center;
-    color: #3AD83A;
-    font-size: 27px;
-    background: rgba(0, 0, 0, 0.5);
-}
-
 .buttons {
-    width: 60vw;
-    padding-top: 300px;
-    bottom: 20px;
-    margin: 0 auto;
-    max-width: 310px;
-}
-
-.submit-button-wrapper {
-    position: absolute;
-    bottom: 20px;
+    margin: auto;
     width: 100%;
-}
-
-button.search-submit {
-    width: 75%;
-    margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 20px;
-    position: absolute;
-    background: #3AD83A;
-    border-radius: 8px;
-    font-family: Roboto-Medium;
-    font-size: 19px;
-    color: #FFFFFF;
-    max-width: 310px;
-}
-
-.searchbar {
-    padding-top: 30vh;
-    max-width: 650px;
-    margin: auto;
+    padding-top: 170px;
+    position: fixed;
+    bottom: 40px;
 }
 
 .submit {
@@ -105,11 +65,8 @@ button.search-submit {
     color: #FFFFFF;
     width: 79%;
     margin: auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 20px;
-    max-width: 310px;
+    position: relative;
+    left: 10.3%;
 }
 
 .dropdown {
@@ -141,6 +98,7 @@ button.search-submit {
 
 .seat-icon {
     margin: auto;
+    padding-top: 20px;
     text-align: center;
 }
 
@@ -167,10 +125,9 @@ button.btn.btn-secondary.btn-lg.dropdown-toggle {
 
 .menu-container {
     /* Rectangle: */
-    background: #FFFFFF;
-    border: 1px solid #979797;
-    border-radius: 30px;
-    width: 100%;
+    background: black;
+    width: 102%;
+    opacity: 0.75;
     display: none;
 }
 
@@ -211,56 +168,9 @@ h1.price {
     border-radius: 2px;
 }
 
-.carousel-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.img-fluid {
-    height: 300px;
-    width: 300px;
-    outline: none;
-    display: block;
-    margin: auto;
-    margin-bottom: 40px;
-}
-
-.torchyTable {
-    margin: 0px 0px 110px 0px;
-    color: white;
-}
-
-.cucinaTable {
-    margin: 0px 0px 110px 0px;
-    color: white;
-}
-
 #ticket {
     font-size: 38px;
     color: #3AD83A;
-    position: relative;
-    left: 0%;
-    top: 24px;
-}
-
-#tix-submit {
-    position: absolute;
-    bottom: 20px;
-}
-
-h1.top {
-    position: absolute;
-    top: -10px;
-    left: 5vw;
-    right: 5vw;
-}
-
-.dropdown-wrapper {
-    position: relative;
-    top: 12vh;
-    max-width: 760px;
-    margin: auto;
 }
 
 .flex-container {
@@ -312,6 +222,7 @@ h1.top {
 
 .login-container {
     display: none;
+    margin-top: 30%;
 }
 
 .checkout-modal {
@@ -346,22 +257,12 @@ h1.top {
     width: 60%;
     height: 240px;
     padding-top: 40px;
-    margin: 25vh auto;
-    font-family: Roboto-Medium, sans-serif;
-    max-width: 450px;
-}
-
-img#theImg {
-    margin: 10px auto;
-}
-
-div#currentUser {
-    margin-top: 2px;
+    margin: auto;
 }
 
 #signout {
     color: #000000;
-    margin: 4px auto;
+    margin: auto;
 }
 
 #my-signin2>div {
@@ -373,8 +274,78 @@ div#currentUser {
     color: #3AD83A;
 }
 
+.img-fluid {
+    height: 300px;
+    width: 300px;
+    outline: none;
+    display: block;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.cucinaTable {
+    margin: 0px 0px 140px 0px;
+    color: white;
+}
+
+.torchyTable {
+    margin: 0px 0px 110px 0px;
+    color: white;
+}
+
+.orderQty0 {
+    color: black;
+    opacity: 0.75;
+    float: right;
+    position: absolute;
+    right: 20px;
+    margin-top: -20px;
+    height: 18px;
+}
+.orderQty1 {
+    color: black;
+    opacity: 0.75;
+    float: right;
+    position: absolute;
+    right: 20px;
+    margin-top: -20px;
+    height: 18px;
+}
+.orderQty2 {
+    color: black;
+    opacity: 0.75;
+    float: right;
+    position: absolute;
+    right: 20px;
+    margin-top: -20px;
+    height: 18px;
+}
+.orderQty3 {
+    color: black;
+    opacity: 0.75;
+    float: right;
+    position: absolute;
+    right: 20px;
+    margin-top: -20px;
+    height: 18px;
+}
+.orderQty4 {
+    color: black;
+    opacity: 0.75;
+    float: right;
+    position: absolute;
+    right: 20px;
+    margin-top: -20px;
+    height: 18px;
+}
+
+input {
+	width: 30px;
+	color: black;
+}
+
 @media screen and (max-width: 640px) {
     body {
-        background-image: url("../images/DKRsmall.jpg");
+        background-image: url("../images/resize-iphone.jpg");
     }
 }
