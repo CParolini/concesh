@@ -10,6 +10,6 @@ module.exports = (req) => {
     amount: cartTotal.cart(),
     currency: "usd",
     source: token,
-    description: 'food', 
+    description: 'food',
   });
-}
+};

@@ -11,10 +11,6 @@ dotenv.config({
   path: `${__dirname}/${envfile}`,
 });
 
-// *now* load our custom Stripe charing module
-// which we'll use in the router later on
-const charge = require('./charge');
-
 // create the server, and all the routes and configuration
 // go against this `app`
 const app = express();

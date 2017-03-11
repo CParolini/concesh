@@ -1,7 +1,7 @@
 USE concesh_db;
 
 INSERT INTO venues (venue_name, latitude, longitude, sections, rows, seats)
-VALUES ("Darrell K Royal-Texas Memorial Stadium", 30.2836813, -97.7325345, 39, 40, 25);
+VALUES ("Darrell K Royal-Texas Memorial Stadium", 30.2836813, -97.7325345, 39, 50, 25);
 
 INSERT INTO vendors (vendor_name, venueId)
 VALUES ("La Cucina: Italian Cantina", 1),

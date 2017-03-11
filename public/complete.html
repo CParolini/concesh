@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="google-signin-client_id" content="911476103780-5im21hafg5fpq9vig2lna1ifbj8k7eea.apps.googleusercontent.com">
+	<title>Concesh</title>
+	<link rel=stylesheet href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel=stylesheet href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700|Signika:600,700" rel="stylesheet">
+	<link rel=stylesheet href="css/checkoutstyle.css">
+</head>
+
+<body>
+
+	<!-- THIS IS THE CHECKOUT MODAL -->
+
+	<div class=checkout-modal id="checkout-modal">
+		<div class="row">
+			<p>Your order total is $9.99</p>
+		</div>
+		<div class="row">
+			<p>Your order will be ready in: 10 Minutes</p>
+			<i class="icon-remove-sign" id="x"></i>
+		</div>
+		<div class="row">
+			<h2 class="modal"><span id="time-rem"></span>???</h2>
+		</div>
+		<div class="row">
+			<p>Receipt sent to:</p>
+			<div id="emailReceipt">
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+	<script src="https://use.fontawesome.com/26e56c5853.js"></script>
+	<script src="js/ui.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfX53k8sSPq5gCp4E5qxumPQk3mlGk53w&libraries=places&callback=initAutocomplete" async defer></script>
+</body>
+
+</html>
